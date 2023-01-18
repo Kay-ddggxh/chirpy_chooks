@@ -13,14 +13,22 @@
 	{% endblock %}
 
 	{% block corecss%}
+		<!-- Google fonts -->
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
 		<!-- Bootstrap CSS -->
 		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+		<!-- Custom stylesheet -->
+		<link rel="stylesheet" href="{% static 'css/base.css' %}">
 	{% endblock %}
 
 	{% block extra_css %}
 	{% endblock %}
 	
 	{% block corejs %}
+		<!-- Iconify -->
+        <script src="https://code.iconify.design/iconify-icon/1.0.1/iconify-icon.min.js"></script>
 		<!-- Bootstrap JS -->
 		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 	{% endblock %}
@@ -31,6 +39,68 @@
     <title>Chirpy Chooks | West Ireland Poultry</title>
   </head>
   <body>
+
+	<!-- PAGE HEADER - START -->
+	<header class="fixed top">
+		<div class="header-banner d-flex justify-content-between align-items-center">
+			<div class="logo-container">
+				<a class="navbar-brand logo" href="{% url 'core' %}" aria-label="home link">Chirpy Chooks</a>
+			</div>
+			<div class="banner-info d-none d-md-block">
+				<span class="banner-info_delivery text-muted"><iconify-icon inline icon="ph:map-pin"></iconify-icon> Delivery/Collection</span>
+				<span class="banner-info_email text-muted"><iconify-icon inline icon="entypo:email"></iconify-icon> info@chirpychooks.ie</span>
+				<span class="banner-info_phone text-muted"><iconify-icon inline icon="ph:phone-light"></iconify-icon> 065 000000</span>
+			</div>
+		</div>
+		<!-- NAVIGATION - START -->
+		<nav class="navbar navbar-expand-lg bg-body-tertiary">
+			<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="toggler-icon"><iconify-icon icon="circum:menu-burger"></iconify-icon></span>
+			</button>
+			<div class="w-100 d-flex justify-content-between">	
+				<div class="collapse navbar-collapse" id="navbarNavDropdown">
+					<ul class="navbar-nav w-100 d-flex justify-content-between">
+						<li class="nav-item">
+							<a class="nav-link" aria-current="page" href="">Home</a>
+						</li>
+						<li class="nav-item dropdown">
+							<a class="nav-link dropdown-toggle" href="" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+								Live Poultry
+							</a>
+							<ul class="dropdown-menu">
+								<li><a class="dropdown-item" href="">Layers</a></li>
+								<li><a class="dropdown-item" href="">Broilers</a></li>
+								<li><a class="dropdown-item" href="">Ducks</a></li>
+								<li><a class="dropdown-item" href="">Roosters</a></li>
+							</ul>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" aria-current="page" href="">Forum</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="">Contact Us</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="">Login</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="">Sign Up</a>
+						</li>
+						<li class="nav-item basket-link">
+							<a class="nav-link" href=""><iconify-icon inline icon="fluent-emoji-high-contrast:basket" style="color: black;"></iconify-icon> Basket</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+		<!-- NAVIGATION - END -->
+	</header>
+	<!-- PAGE HEADER - END -->
+
+	{%if messages %}
+		<div class="message-container"></div>
+	{% endif %}
+
 	{% block content %}
 	{% endblock %}
 

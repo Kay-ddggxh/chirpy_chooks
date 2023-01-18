@@ -1,0 +1,76 @@
+/* Google Fonts: font-family: 'Pacifico', cursive; */
+
+:root {
+    --primary-color: #FED049
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+/* General styling */
+
+
+/* Header and Navigation styling */
+
+.header-banner {
+    margin: 1.8em;
+}
+
+.banner-info>* {
+    margin: 0 .5em;
+}
+
+.logo {
+    font-family: 'Pacifico', cursive;
+    font-size: 2.25rem;
+    color: #000;
+}
+
+.navbar-nav,
+.dropdown-item {
+    background-color: var(--primary-color);
+}
+
+.nav-item,
+.dropdown-item {
+    padding: .3em .8em;
+    border: 1px #ffbf00 solid;
+    flex: 1;
+    text-align: center;
+}
+
+.nav-item:hover {
+    background-color: #ffbf00;
+}
+
+.nav-link {
+    color: #000;
+    font-size: 1.3rem;
+}
+
+.nav-link:hover {
+    color: #000;
+    font-weight: 600;
+}
+
+.dropdown-menu {
+    padding: 0;
+    max-width: 260px;
+    margin: 0 auto;
+}
+
+.dropdown-item:hover {
+    color: #000;
+    font-weight: 600;
+    background-color: #ffbf00;
+}
+
+.navbar-toggler {
+    border: 1px solid rgb(65, 65, 65);
+    margin-left: 2em;
+}
