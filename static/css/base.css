@@ -14,6 +14,15 @@
 
 /* General styling */
 
+html {
+    height: 100%;
+}
+
+body {
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+}
 
 /* Header and Navigation styling */
 
@@ -77,11 +86,89 @@
 
 /* Footer styling */
 
+footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: auto;
+    background-color: var(--primary-color);
+}
+
+.social-media-container {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.social-icon {
+    font-size: 2.5rem;
+}
+
+.newsletter-toggle-container {
+    display: none;
+}
+
+.newsletter-toggle {
+    border: none;
+    background-color: transparent;
+    text-decoration: underline;
+}
+
 /* Mailchimp newsletter styling */
 
 #mc_embed_signup {
-    background: #fff;
+    background: transparent;
     clear: left;
-    font: 14px Helvetica, Arial, sans-serif;
-    width: 500px;
+    font: .6rem Helvetica, Arial, sans-serif;
+    max-width: 500px;
+}
+
+#mc_embed_signup h2 {
+    font-size: .8rem;
+    margin: .2em;
+}
+
+#mc_embed_signup form {
+    margin: .5em .5em 0 0;
+}
+
+#mc_embed_signup .button {
+    border-radius: 4px;
+    background-color: #000;
+    color: #fff;
+    font-weight: 600;
+    font-size: .6rem;
+    line-height: 1;
+    padding: .2em .7em;
+}
+
+#mc_embed_signup .button:hover {
+    color: #000;
+    background-color: #fff;
+}
+
+.mailchimp-logo {
+    max-width: 60px;
+}
+
+
+/* MEDIA QUERIES */
+
+@media (max-width: 767px) {
+
+    /* Footer styling */
+    footer {
+        flex-direction: column;
+        padding: .6rem 0;
+    }
+
+    /* Newsletter signup */
+    .newsletter-toggle-container {
+        display: block;
+    }
+
+    #mc_embed_signup {
+        display: none;
+    }
 }
