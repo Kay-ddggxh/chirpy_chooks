@@ -5,4 +5,4 @@ def index(request):
     """
     renders index page
     """
-    return render(request, 'core/index.html')
+    return render(request, 'home/index.html')

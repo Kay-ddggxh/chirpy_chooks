@@ -74,3 +74,14 @@
     border: 1px solid rgb(65, 65, 65);
     margin-left: 2em;
 }
+
+/* Footer styling */
+
+/* Mailchimp newsletter styling */
+
+#mc_embed_signup {
+    background: #fff;
+    clear: left;
+    font: 14px Helvetica, Arial, sans-serif;
+    width: 500px;
+}
