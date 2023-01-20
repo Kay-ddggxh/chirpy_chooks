@@ -1,7 +1,9 @@
-/* Google Fonts: font-family: 'Pacifico', cursive; */
+/* Google Fonts: font-family: 'Pacifico', cursive;
+                 font-family: 'Varela Round', sans-serif; */
 
 :root {
-    --primary-color: #FED049
+    --primary-color: #FED049;
+    --primary-color-dark: #ffbf00;
 }
 
 *,
@@ -22,6 +24,7 @@ body {
     min-height: 100%;
     display: flex;
     flex-direction: column;
+    font-family: 'Varela Round', sans-serif;
 }
 
 /* Header and Navigation styling */
@@ -45,16 +48,20 @@ body {
     background-color: var(--primary-color);
 }
 
+.navbar {
+    padding: 0;
+}
+
 .nav-item,
 .dropdown-item {
     padding: .3em .8em;
-    border: 1px #ffbf00 solid;
+    border: 1px var(--primary-color-dark) solid;
     flex: 1;
     text-align: center;
 }
 
 .nav-item:hover {
-    background-color: #ffbf00;
+    background-color: var(--primary-color-dark);
 }
 
 .nav-link {
@@ -76,12 +83,48 @@ body {
 .dropdown-item:hover {
     color: #000;
     font-weight: 600;
-    background-color: #ffbf00;
+    background-color: var(--primary-color-dark);
 }
 
 .navbar-toggler {
     border: 1px solid rgb(65, 65, 65);
     margin-left: 2em;
+}
+
+/* Home page styling */
+
+.hero-img {
+    width: 100%;
+}
+
+.home-heading {
+    margin: 1.2em 1.6em;
+    font-weight: 800;
+}
+
+.home-intro {
+    line-height: 2;
+    font-size: 1.2rem;
+}
+
+.shop-now-btn {
+    color: #000;
+    background-color: var(--primary-color-dark);
+    text-decoration: none;
+    font-size: 2rem;
+    padding: .5em;
+    margin: .5em 0;
+    border-radius: 4px;
+}
+
+.shop-now-btn:hover {
+    color: var(--primary-color-dark);
+    background-color: #000;
+}
+
+.shop-now-btn:active {
+    transform: scale(1.05);
+    transition: ease-in-out;
 }
 
 /* Footer styling */
@@ -170,5 +213,11 @@ footer {
 
     #mc_embed_signup {
         display: none;
+    }
+}
+
+@media (max-width: 470px) {
+    :root {
+        font-size: 14px;
     }
 }
