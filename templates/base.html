@@ -48,6 +48,7 @@
 			<div class="logo-container">
 				<a class="navbar-brand logo" href="{% url 'home' %}" aria-label="home link">Chirpy Chooks</a>
 			</div>
+			<!-- Search form goes here -->
 			<div class="banner-info d-none d-md-block">
 				<span class="banner-info_delivery text-muted"><iconify-icon inline icon="ph:map-pin"></iconify-icon> Delivery/Collection</span>
 				<span class="banner-info_email text-muted"><iconify-icon inline icon="entypo:email"></iconify-icon> info@chirpychooks.ie</span>
@@ -82,12 +83,29 @@
 						<li class="nav-item">
 							<a class="nav-link" href="">Contact Us</a>
 						</li>
+						{% if request.user.is_authenticated %}
+						<li class="nav-item dropdown">
+							<a class="nav-link dropdown-toggle" href="" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+								Profile
+							</a>
+							<ul class="dropdown-menu">
+								<li><a class="dropdown-item" href="">Manage Profile</a></li>
+								{% if request.user.is_superuser %}
+								<li><a class="dropdown-item" href="">Manage Products</a></li>
+								{% endif %}
+							</ul>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="">Logout</a>
+						</li>
+						{% else %}
 						<li class="nav-item">
 							<a class="nav-link" href="">Login</a>
 						</li>
 						<li class="nav-item">
 							<a class="nav-link" href="">Sign Up</a>
 						</li>
+						{% endif %}
 						<li class="nav-item basket-link">
 							<a class="nav-link" href=""><iconify-icon inline icon="fluent-emoji-high-contrast:basket" style="color: black;"></iconify-icon> Basket</a>
 						</li>
