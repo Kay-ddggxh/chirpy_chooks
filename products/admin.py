@@ -3,10 +3,15 @@ from .models import Product, Category
 
 
 @admin.register(Product)
-class ProductsAdmin(admin.ModelAdmin):
-    pass
+class ProductAdmin(admin.ModelAdmin):
+    list_display = (
+        'breed',
+        'category',
+        'price',
+        'image',
+    )
 
 
 @admin.register(Category)
-class ProductsAdmin(admin.ModelAdmin):
+class CategoryAdmin(admin.ModelAdmin):
     pass
