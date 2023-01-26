@@ -27,6 +27,17 @@ body {
     font-family: 'Varela Round', sans-serif;
 }
 
+h1 {
+    margin: 1.2em 1.6em;
+    font-weight: 800;
+}
+
+p {
+    line-height: 2;
+    font-size: 1.2rem;
+    margin: 0 3.5em 1.5em 3.5em;
+}
+
 /* Header and Navigation styling */
 
 .header-banner {
@@ -97,16 +108,6 @@ body {
     width: 100%;
 }
 
-.home-heading {
-    margin: 1.2em 1.6em;
-    font-weight: 800;
-}
-
-.home-intro {
-    line-height: 2;
-    font-size: 1.2rem;
-}
-
 .shop-now-btn {
     color: #000;
     background-color: var(--primary-color-dark);
@@ -125,6 +126,42 @@ body {
 .shop-now-btn:active {
     transform: scale(1.05);
     transition: ease-in-out;
+}
+
+
+/* Products page styling */
+
+.category-card-container {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.category-card {
+    width: fit-content;
+    border: solid 2px var(--primary-color-dark);
+    border-radius: 4px;
+    margin: 0 1.5em 1.5em 0;
+}
+
+.category-link {
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.category-img {
+    padding: 1em 0;
+    display: block;
+    width: 100%;
+    max-width: 250px;
+    margin: 0 auto;
+}
+
+.category-link-title {
+    color: #000;
+    text-align: center;
+    font-weight: 600;
 }
 
 /* Footer styling */
