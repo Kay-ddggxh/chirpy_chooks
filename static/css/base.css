@@ -131,7 +131,8 @@ p {
 
 /* Categories/Products page styling */
 
-.card-container {
+.card-container,
+.detail-container {
     max-width: 1100px;
     margin: 0 auto;
 }
@@ -167,6 +168,24 @@ p {
     text-align: center;
     font-weight: 600;
     margin-top: auto;
+}
+
+/* Product detail page styling */
+
+.detail-container {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.detail-img {
+    max-width: 280px;
+    display: block;
+    margin: 0 auto;
+}
+
+.detail-list {
+    font-size: 1.3rem;
+    line-height: 2;
 }
 
 /* Footer styling */
@@ -241,6 +260,11 @@ footer {
 /* MEDIA QUERIES */
 
 @media (max-width: 767px) {
+
+    /* Product detail page styling */
+    .detail-container {
+        flex-direction: column;
+    }
 
     /* Footer styling */
     footer {

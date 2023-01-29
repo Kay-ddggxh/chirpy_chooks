@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+<h1>{{ product.breed }}</h1>
+<div class="detail-container">
+    <img class="detail-img px-1" src="{{ product.image.url }}" alt="{{ product.breed }}">
+    <div class="detail-info px-4">
+        <ul class="detail-list">
+            <li class="detail-list_item">{{ product.description }}</li>
+            <li class="detail-list_item">{{ product.plumage }}</li>
+            {% if not product.is_broiler %}
+                <li class="detail-list_item">Eggs per year: {{ product.eggs_per_year }}</li>
+            {% endif %}
+            <li class="detail-list_item">€ {{ product.price }}</li>
+        </ul>
+        <!-- Shopping form goes here -->
+    </div>
+    
+</div>
+{% endblock %}

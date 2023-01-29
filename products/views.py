@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404
 from .models import Product, Category
 
 
@@ -34,3 +34,18 @@ def products(request):
     }
 
     return render(request, 'products/products.html', context)
+
+
+# Source code: Code Institute Boutique Ado walkthrough https://github.com/Kathrin-ddggxh/CI_boutique-ado/blob/main/products/views.py#:~:text=def%20product_detail(,%2C%20context)  # noqa
+def product_detail(request, product_id):
+    """
+    Displays product details
+    """
+
+    product = get_object_or_404(Product, pk=product_id)
+
+    context = {
+        'product': product,
+    }
+
+    return render(request, 'products/product_detail.html', context)

@@ -8,7 +8,7 @@
         <div class="row d-flex justify-content-evenly card-container">
             {% for product in products%}
                 <div class="product-card">
-                    <a href="" class="product-link">
+                    <a href="{% url 'product_detail' product.id %}" class="product-link">
                         <img class="product-img" src="{{ product.image.url }}" alt="{{ product.breed }}">
                         <h2 class="product-link-title">{{ product.breed }}</h2>
                     </a>
