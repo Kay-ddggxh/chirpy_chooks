@@ -2,19 +2,18 @@
 {% load static %}
 
 {% block content %}
-
-<h1>All our poultry</h1>
-<p>Pick from our large variety of layer and meat birds.</p>
+    <h1>{{ current_category }}</h1>
+    <p>General info about layers goes here, i.e. age, etc</p>
     <div class="container-fluid">
-        <div class="row d-flex justify-content-evenly category-card-container">
-            {% for category in categories %}
-                <div class="category-card">
-                    <a href="" class="category-link">
-                        <img class="category-img" src="{{ category.image.url }}" alt="{{ category.name }}">
-                        <h2 class="category-link-title">{{ category.name }}</h2>
+        <div class="row d-flex justify-content-evenly card-container">
+            {% for product in products%}
+                <div class="product-card">
+                    <a href="" class="product-link">
+                        <img class="product-img" src="{{ product.image.url }}" alt="{{ product.breed }}">
+                        <h2 class="product-link-title">{{ product.breed }}</h2>
                     </a>
                 </div>
             {% endfor %}
-        </div>
+       </div>
     </div>
 {% endblock %}

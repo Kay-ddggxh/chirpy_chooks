@@ -129,28 +129,31 @@ p {
 }
 
 
-/* Products page styling */
+/* Categories/Products page styling */
 
-.category-card-container {
+.card-container {
     max-width: 1100px;
     margin: 0 auto;
 }
 
-.category-card {
+.category-card,
+.product-card {
     width: fit-content;
     border: solid 2px var(--primary-color-dark);
     border-radius: 4px;
     margin: 0 1.5em 1.5em 0;
 }
 
-.category-link {
+.category-link,
+.product-link {
+    min-height: 100%;
     text-decoration: none;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
 }
 
-.category-img {
+.category-img,
+.product-img {
     padding: 1em 0;
     display: block;
     width: 100%;
@@ -158,10 +161,12 @@ p {
     margin: 0 auto;
 }
 
-.category-link-title {
+.category-link-title,
+.product-link-title {
     color: #000;
     text-align: center;
     font-weight: 600;
+    margin-top: auto;
 }
 
 /* Footer styling */
