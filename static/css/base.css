@@ -119,8 +119,8 @@ p {
 }
 
 .shop-now-btn:hover {
-    color: var(--primary-color-dark);
-    background-color: #000;
+    color: #000;
+    background-color: var(--primary-color);
 }
 
 .shop-now-btn:active {

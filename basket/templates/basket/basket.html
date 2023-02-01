@@ -2,5 +2,30 @@
 {% load static %}
 
 {% block content %}
-    <h1>Basket is up!!!</h1>
+    <h1>Shopping Basket</h1>
+    <div class="container">
+        {% if basket_items %}
+            <div class="table-responsive">
+                <table class="table table-borderless">
+                    <thead>
+                        <tr>
+                            <th>Product</th>
+                            <th></th>
+                            <th>Price</th>
+                            <th>Quantity</th>
+                            <th>Subtotal</th>
+                        </tr>
+                    </thead>
+                    {% for item in basket_items %}
+                        <tr>
+                            <td></td>
+                        </tr>
+                    {% endfor %}
+                </table>
+            </div>
+        {% else %}
+            <p>Basket is empty.</p>
+            <a href="{% url 'categories' %}" class="shop-now-btn mx-5 align-self-start">Back to products</a>
+        {% endif %}
+    </div>
 {% endblock %}
