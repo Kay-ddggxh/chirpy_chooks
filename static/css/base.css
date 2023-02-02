@@ -28,7 +28,7 @@ body {
 }
 
 h1 {
-    margin: 1.2em 1.6em;
+    margin: 0.5em 0 1.2em 1.6em;
     font-weight: 800;
 }
 
@@ -108,7 +108,8 @@ p {
     width: 100%;
 }
 
-.shop-now-btn {
+.shop-now-btn,
+.basket-form-btn {
     color: #000;
     background-color: var(--primary-color-dark);
     text-decoration: none;
@@ -118,12 +119,14 @@ p {
     border-radius: 4px;
 }
 
-.shop-now-btn:hover {
+.shop-now-btn:hover,
+.basket-form-btn:hover {
     color: #000;
     background-color: var(--primary-color);
 }
 
-.shop-now-btn:active {
+.shop-now-btn:active,
+.basket-form-btn:active {
     transform: scale(1.05);
     transition: ease-in-out;
 }
@@ -175,6 +178,7 @@ p {
 .detail-container {
     display: flex;
     justify-content: space-evenly;
+    align-items: flex-start
 }
 
 .detail-img {
@@ -186,6 +190,12 @@ p {
 .detail-list {
     font-size: 1.3rem;
     line-height: 2;
+}
+
+.basket-form-btn {
+    border: none;
+    font-size: 1.2rem;
+    margin: 1em 2em;
 }
 
 /* Footer styling */
