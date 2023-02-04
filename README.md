@@ -8,6 +8,12 @@
 
 ## Source Credits
 
+### Online tools
+
+**JQuery to JavaScript converter**:
+
+[Proper Programming JQuery to JS converter](https://properprogramming.com/tools/jquery-to-javascript-converter/#Convert_jQuery_to_JavaScript_Online_Tool)
+
 ### References/Documentation/Tutorials
 
 **Basket items count display in navbar**:

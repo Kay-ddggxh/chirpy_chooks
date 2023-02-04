@@ -24,6 +24,7 @@
                             <td class="text-end">€ {{ item.product.price }}</td>
                             <td class="text-end">{{ item.quantity }}</td>
                             <td class="text-end">€ {{ item.product.price }}</td>
+                            <td>{% include "basket/quantity-form.html" %}</td>
                         </tr>
                     {% endfor %}
                     <tr class="border-top border-secondary">
@@ -47,8 +48,8 @@
                     </tr>
                 </table>
             </div>
-            <div class="float-end mt-5">
-                <a href="{% url 'products' %}" class="basket-form-btn">Keep Shopping</a>
+            <div class="float-end my-5">
+                <a href="{% url 'categories' %}" class="basket-form-btn">Keep Shopping</a>
                 <a href="" class="basket-form-btn mx-0">Go to Checkout</a>
             </div>
         {% else %}
@@ -56,4 +57,38 @@
             <a href="{% url 'categories' %}" class="shop-now-btn mx-5 align-self-start">Back to products</a>
         {% endif %}
     </div>
+{% endblock %}
+
+{% block postloadjs %}
+{{ block.super }}
+
+{% include 'basket/includes/quantity_input_script.html' %}
+
+<script type="text/javascript">
+    /* 
+    Source code originally from: https://github.com/Code-Institute-Solutions/boutique_ado_v1/blob/7e5faf3f2fc5fe20e382f91ea0b86a28b4917359/bag/templates/bag/bag.html#:~:text=%3Cscript%20type,%3C/script%3E
+    Converted from JQuery to standard JavaScript with https://properprogramming.com/tools/jquery-to-javascript-converter/#Convert_jQuery_to_JavaScript_Online_Tool
+    Note: all variables were changed from var to let in keeping with modern ES6 standards
+    */
+    
+    // Update quantity on click
+    document.querySelector('.update-link').click(function(e) {
+        let form = document.querySelector(this).prev('.update-form');
+        form.submit();
+    })
+
+    // Remove item and reload on click
+    document.querySelector('.remove-item').click(function(e) {
+        let csrfToken = "{{ csrf_token }}";
+        let itemId = document.querySelector(this).attr('id').split('remove_')[1];
+        let url = `/basket/remove/${itemId}/`;
+        let data = {'csrfmiddlewaretoken': csrfToken};
+
+        $.post(url, data)
+         .done(function() {
+             location.reload();
+         });
+    })
+</script>
+
 {% endblock %}

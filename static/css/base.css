@@ -38,6 +38,7 @@ p {
     margin: 0 3.5em 1.5em 3.5em;
 }
 
+
 /* Header and Navigation styling */
 
 .header-banner {
@@ -203,6 +204,12 @@ p {
 .basket-img {
     width: 15%;
     margin-right: 2rem;
+}
+
+.decrement-qty,
+.increment-qty {
+    padding: 0 .5em;
+    margin: 0;
 }
 
 /* Footer styling */
