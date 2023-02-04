@@ -42,10 +42,14 @@
                     </tr>
                     <tr>
                         <td colspan="4" class="text-end">
-                            <strong>Total: € {{ grand_total | floatformat:2 }}</strong>
+                            <strong>Grand Total: € {{ grand_total | floatformat:2 }}</strong>
                         </td>
                     </tr>
                 </table>
+            </div>
+            <div class="float-end mt-5">
+                <a href="{% url 'products' %}" class="basket-form-btn">Keep Shopping</a>
+                <a href="" class="basket-form-btn mx-0">Go to Checkout</a>
             </div>
         {% else %}
             <p>Basket is empty.</p>

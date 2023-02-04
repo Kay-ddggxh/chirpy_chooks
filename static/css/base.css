@@ -303,4 +303,9 @@ footer {
     :root {
         font-size: 14px;
     }
+
+    /* Basket styling */
+    .basket-form-btn {
+        font-size: .8rem;
+    }
 }
