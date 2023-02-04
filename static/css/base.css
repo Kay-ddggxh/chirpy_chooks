@@ -198,6 +198,13 @@ p {
     margin: 1em 2em;
 }
 
+/* Shopping basket styling */
+
+.basket-img {
+    width: 15%;
+    margin-right: 2rem;
+}
+
 /* Footer styling */
 
 footer {

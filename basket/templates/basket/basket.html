@@ -6,22 +6,45 @@
     <div class="container">
         {% if basket_items %}
             <div class="table-responsive">
-            {{ basket_items }}
                 <table class="table table-borderless">
                     <thead>
-                        <tr>
-                            <th>Product</th>
-                            <th></th>
-                            <th>Price</th>
-                            <th>Quantity</th>
-                            <th>Subtotal</th>
+                        <tr class="border-bottom border-secondary">
+                            <th scope="col">Product</th>
+                            <th class="text-end" scope="col">Price</th>
+                            <th class="text-end" scope="col">Quantity</th>
+                            <th class="text-end" scope="col">Subtotal</th>
                         </tr>
                     </thead>
                     {% for item in basket_items %}
                         <tr>
-                            <td></td>
+                            <td class="w-25">
+                                <img class="basket-img" src="{{ item.product.image.url }}" alt="{{ item.product.breed }}">
+                                {{ item.product.breed }}
+                            </td>
+                            <td class="text-end">€ {{ item.product.price }}</td>
+                            <td class="text-end">{{ item.quantity }}</td>
+                            <td class="text-end">€ {{ item.product.price }}</td>
                         </tr>
                     {% endfor %}
+                    <tr class="border-top border-secondary">
+                        <td colspan="4" class="text-end">
+                            <strong>Basket Total: € {{ total | floatformat:2 }}</strong>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="4" class="text-end">
+                            Delivery Cost: € {{ delivery | floatformat:2 }}
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2"></td>
+                        <td colspan="2" class="text-end border-top border-secondary"></td>
+                    </tr>
+                    <tr>
+                        <td colspan="4" class="text-end">
+                            <strong>Total: € {{ grand_total | floatformat:2 }}</strong>
+                        </td>
+                    </tr>
                 </table>
             </div>
         {% else %}
