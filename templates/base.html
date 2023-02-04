@@ -106,7 +106,12 @@
 						</li>
 						{% endif %}
 						<li class="nav-item basket-link">
-							<a class="nav-link" href="{% url 'basket' %}"><iconify-icon inline icon="fluent-emoji-high-contrast:basket" style="color: black;"></iconify-icon> Basket</a>
+							<a class="nav-link" href="{% url 'basket' %}">
+								<iconify-icon inline icon="fluent-emoji-high-contrast:basket" style="color: black;"></iconify-icon> Basket 
+								{% if basket_items %}
+									<span class="basket-items-count">&#40;{{ request.session.basket.keys | length }}&#41;</span>
+								{% endif %}
+							</a>
 						</li>
 					</ul>
 				</div>

@@ -10,6 +10,13 @@
 
 ### References/Documentation/Tutorials
 
+**Basket items count display in navbar**:
+
+The syntax for displaying the amount of items currently in the shopping basket was taken from the following tutorial:
+
+https://www.youtube.com/watch?v=3xQRJqxdgK4&ab_channel=FeelFreeToCode
+
+
 ### Content/Data
 
 All fixtures for the products app were manually compiled with data gathered from various online resources.

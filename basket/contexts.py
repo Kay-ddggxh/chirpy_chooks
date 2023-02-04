@@ -1,8 +1,10 @@
 from decimal import Decimal
 from django.conf import settings
+from django.shortcuts import get_object_or_404
+from products.models import Product
 
 
-# Source code with variation: https://github.com/Code-Institute-Solutions/boutique_ado_v1/blob/9c2aa64f4edffb25e330d722ee66542e553edb80/bag/contexts.py  # noqa
+# Source code with variation: https://github.com/Code-Institute-Solutions/boutique_ado_v1/blob/4b28dfe82da5e5e24ed830f15ebe4f70deca8886/bag/contexts.py  # noqa
 def basket_contents(request):
 
     basket_items = []
@@ -10,6 +12,17 @@ def basket_contents(request):
     product_count = 0
     delivery = 0
     grand_total = delivery + total
+    basket = request.session.get('basket', {})
+
+    for item_id, quantity in basket.items():
+        product = get_object_or_404(Product, pk=item_id)
+        total += quantity * product.price
+        product_count += quantity
+        basket_items.append({
+            'item_id': item_id,
+            'quantity': quantity,
+            'product': product,
+        })
 
     context = {
         'basket_items': basket_items,
