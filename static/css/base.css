@@ -212,6 +212,15 @@ p {
     margin: 0;
 }
 
+.qty_input {
+    max-width: 25%;
+}
+
+.update-link,
+.remove-item {
+    cursor: pointer;
+}
+
 /* Footer styling */
 
 footer {

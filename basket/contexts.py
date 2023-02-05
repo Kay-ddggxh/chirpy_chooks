@@ -11,7 +11,6 @@ def basket_contents(request):
     total = 0
     product_count = 0
     delivery = 0
-    grand_total = delivery + total
     basket = request.session.get('basket', {})
 
     for item_id, quantity in basket.items():
@@ -23,6 +22,8 @@ def basket_contents(request):
             'quantity': quantity,
             'product': product,
         })
+
+    grand_total = delivery + total
 
     context = {
         'basket_items': basket_items,
