@@ -10,11 +10,11 @@
 
 ### Online tools
 
-**JQuery to JavaScript converter**:
-
-[Proper Programming JQuery to JS converter](https://properprogramming.com/tools/jquery-to-javascript-converter/#Convert_jQuery_to_JavaScript_Online_Tool)
-
 ### References/Documentation/Tutorials
+
+**Bag tools**:
+
+[Django Docs on creating custom template tags](https://docs.djangoproject.com/en/4.1/howto/custom-template-tags/)
 
 **Basket items count display in navbar**:
 

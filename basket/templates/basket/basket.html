@@ -1,5 +1,6 @@
 {% extends "base.html" %}
 {% load static %}
+{% load basket_tools %}
 
 {% block content %}
     <h1>Shopping Basket</h1>
@@ -23,7 +24,7 @@
                             </td>
                             <td class="text-end">€ {{ item.product.price }}</td>
                             <td class="qty-form text-end">{% include "basket/quantity-form.html" %}</td>
-                            <td class="text-end">€ {{ item.product.price }}</td>
+                            <td class="text-end">€ {{ item.product.price | calc_subtotal:item.quantity }}</td>
                         </tr>
                     {% endfor %}
                     <tr class="border-top border-secondary">
