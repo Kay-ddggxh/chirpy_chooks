@@ -18,9 +18,13 @@
 
 **Basket items count display in navbar**:
 
-The syntax for displaying the amount of items currently in the shopping basket was taken from the following tutorial:
+The syntax for displaying the amount of items currently in the shopping basket was taken from this [FeelFreeToCode tutorial](https://www.youtube.com/watch?v=3xQRJqxdgK4&ab_channel=FeelFreeToCode)
 
-https://www.youtube.com/watch?v=3xQRJqxdgK4&ab_channel=FeelFreeToCode
+**User alerts (toasts/messages)**:
+
+The live feedback messages to alert user actions were implemented using the [Django message framework](https://docs.djangoproject.com/en/4.1/ref/contrib/messages/) and the respective [message levels](https://docs.djangoproject.com/en/4.1/ref/contrib/messages/).
+
+The alert pop-up frames were rendered using [Bootstrap 5 toasts](https://getbootstrap.com/docs/5.0/components/toasts/).
 
 
 ### Content/Data

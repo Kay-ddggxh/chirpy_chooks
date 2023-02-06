@@ -252,6 +252,15 @@ footer {
     text-decoration: underline;
 }
 
+/* Bootstrap Toast styling */
+
+.message-container {
+    position: fixed;
+    top: 72px;
+    right: 15px;
+    z-index: 9999;
+}
+
 /* Mailchimp newsletter styling */
 
 #mc_embed_signup {
