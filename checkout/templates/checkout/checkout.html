@@ -1,5 +1,6 @@
 {% extends "base.html" %}
 {% load static %}
+{% load basket_tools %}
 
 {% block extra_css %}
     <link rel="stylesheet" href="{% static 'checkout/css/checkout.css' %}">
@@ -7,7 +8,51 @@
 
 {% block content %}
     <h1>Checkout</h1>
-    <div class="container">
+    <div class="container checkout-container">
+        <div class="order-summery">
+            <h2>Order Summery</h2>
+            <table class="table table-borderless">
+                    <thead>
+                        <tr class="border-bottom border-secondary">
+                            <th scope="col"></th>
+                            <th colspan="2" scope="colgroup">Product</th>
+                            <th class="text-end" scope="col">Subtotal</th>
+                        </tr>
+                    </thead>
+                    {% for item in basket_items %}
+                        <tr>
+                            <td class="w-25">
+                                <img class="img-fluid" src="{{ item.product.image.url }}" alt="{{ item.product.breed }}">
+                            </td>
+                            <td colspan="2">
+                                <strong>{{ item.product.breed }}</strong>
+                                <br>
+                                Qty: {{ item.quantity }}
+                            </td>
+                            <td class="text-end">€ {{ item.product.price | calc_subtotal:item.quantity }}</td>
+                        </tr>
+                    {% endfor %}
+                    <tr class="border-top border-secondary">
+                        <td colspan="4" class="text-end">
+                            <strong>Basket Total: € {{ total | floatformat:2 }}</strong>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="4" class="text-end">
+                            Delivery Cost: € {{ delivery | floatformat:2 }}
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2"></td>
+                        <td colspan="2" class="text-end border-top border-secondary"></td>
+                    </tr>
+                    <tr>
+                        <td colspan="4" class="text-end">
+                            <strong>Grand Total: € {{ grand_total | floatformat:2 }}</strong>
+                        </td>
+                    </tr>
+                </table>
+        </div>
         <form action="#" method="POST" id="payment-form">
             {% csrf_token %}
             <fieldset class="mb-4">

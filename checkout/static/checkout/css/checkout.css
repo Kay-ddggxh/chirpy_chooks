@@ -1,3 +1,9 @@
+.order-summery {
+    float: right;
+    width: 35%;
+    margin-left: 3em;
+}
+
 .back-to-basket-btn,
 .pay-now-btn:hover {
     border: 2px solid var(--primary-color);
@@ -16,4 +22,12 @@
 
 .btn:hover {
     font-weight: 600;
+}
+
+@media (max-width: 990px) {
+    .order-summery {
+        float: none;
+        width: 100%;
+        margin: 0;
+    }
 }
