@@ -50,7 +50,7 @@
             </div>
             <div class="float-end my-5">
                 <a href="{% url 'categories' %}" class="basket-form-btn">Keep Shopping</a>
-                <a href="" class="basket-form-btn mx-0">Go to Checkout</a>
+                <a href="{% url 'checkout' %}" class="basket-form-btn mx-0">Go to Checkout</a>
             </div>
         {% else %}
             <p>Basket is empty.</p>

@@ -6,6 +6,12 @@
 
 - [Pillow](https://pypi.org/project/Pillow/) (Python Imaging Library)
 
+### Django Libraries
+
+- [django-allauth](https://django-allauth.readthedocs.io/en/latest/) (User authentication)
+- [django-crispy-forms](https://django-crispy-forms.readthedocs.io/en/latest/) (Control rendering behaviour of Django forms)
+- [Bootstrap5 template pack for django-crispy-forms](https://pypi.org/project/crispy-bootstrap5/)
+
 ## Source Credits
 
 ### Online tools

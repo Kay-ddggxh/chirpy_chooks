@@ -1,0 +1,19 @@
+.back-to-basket-btn,
+.pay-now-btn:hover {
+    border: 2px solid var(--primary-color);
+    margin-right: 2em;
+}
+
+
+.pay-now-btn,
+.back-to-basket-btn:hover {
+    background-color: var(--primary-color);
+}
+
+.pay-now-btn:hover {
+    background-color: transparent;
+}
+
+.btn:hover {
+    font-weight: 600;
+}

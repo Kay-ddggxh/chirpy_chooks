@@ -1,6 +1,8 @@
 asgiref==3.6.0
+crispy-bootstrap5==0.7
 Django==3.2
 django-allauth==0.41.0
+django-crispy-forms==1.14.0
 django-rename-app==0.1.5
 oauthlib==3.2.2
 Pillow==9.4.0
