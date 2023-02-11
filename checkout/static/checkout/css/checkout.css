@@ -1,3 +1,7 @@
+#payment-form {
+    width: 60%;
+}
+
 .order-summery {
     float: right;
     width: 35%;
@@ -24,7 +28,40 @@
     font-weight: 600;
 }
 
+/* Stripe elements styling */
+
+/* matching bootstrap "form-control" class styling */
+.StripeElement {
+    display: block;
+    width: 100%;
+    padding: 0.375rem 0.75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border-radius: 0.25rem;
+    transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+}
+
+.StripeElement--webkit-autofill {
+    background-color: #fefde5 !important;
+}
+
+
+/* Layout on small to medium screens */
+
 @media (max-width: 990px) {
+
+    #payment-form {
+        width: 100%;
+    }
+
     .order-summery {
         float: none;
         width: 100%;

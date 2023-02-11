@@ -2,6 +2,8 @@
 
 ## Technologies Used
 
+- [Stripe](https://stripe.com/) (Online payment platform)
+
 ### Python Libraries
 
 - [Pillow](https://pypi.org/project/Pillow/) (Python Imaging Library)
