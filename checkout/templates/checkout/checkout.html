@@ -84,9 +84,9 @@
                 <legend>Payment Details</legend>
                 <!-- Pre-defined Stripe elements -->
                 <div id="card-element"></div>
-                <div id="card-error" class="text-danger" role="alert"></div>
+                <div id="card-errors" class="text-danger mt-2" role="alert"></div>
             </fieldset>
-            <div class="submit-button text-right mt-5 mb-2">                    
+            <div class="text-right mt-5 mb-2 float-end">                    
                 <a href="{% url 'basket' %}" class="btn back-to-basket-btn">
                     <span class="icon">
                         <iconify-icon inline icon="ion:chevron-back-circle" width="16"></iconify-icon>
@@ -99,7 +99,7 @@
                     </span>
                     <span class="font-weight-bold">Pay now</span>
                 </button>
-                <p class="small text-danger my-0">
+                <p class="small text-danger text-end mx-0 mt-2">
                     <span class="icon mt-2">
                         <iconify-icon inline icon="gg:danger" width="14"></iconify-icon>
                     </span>
