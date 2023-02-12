@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block extra_css %}
+    <link rel="stylesheet" href="{% static 'checkout/css/checkout.css' %}">
+{% endblock %}
+
+{% block content %}
+    <h1>Order complete!</h1>
+   
+    <a href="{% url 'categories' %}" class="shop-now-btn mx-5 align-self-start">Back to products</a>
+{% endblock %}
