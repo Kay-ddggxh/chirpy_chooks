@@ -54,6 +54,14 @@
 }
 
 
+/* Checkout success page styling */
+
+.order-confirmation-container {
+    border: 2px solid var(--primary-color-dark);
+    border-radius: 4px;
+}
+
+
 /* Layout on small to medium screens */
 
 @media (max-width: 990px) {

@@ -28,14 +28,13 @@ body {
 }
 
 h1 {
-    margin: 0.5em 0 1.2em 1.6em;
     font-weight: 800;
+    margin-top: 1em;
 }
 
 p {
     line-height: 2;
     font-size: 1.2rem;
-    margin: 0 3.5em 1.5em 3.5em;
 }
 
 
@@ -228,7 +227,7 @@ footer {
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
-    margin-top: auto;
+    margin-top: 50px;
     background-color: var(--primary-color);
 }
 
