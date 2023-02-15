@@ -59,10 +59,10 @@
                 <legend>Personal Details</legend>
                 {{ order_form.full_name | as_crispy_field }}
                 {{ order_form.email | as_crispy_field }}
+                {{ order_form.phone_number | as_crispy_field }}
             </fieldset>
             <fieldset class="mb-4">
                 <legend>Delivery Information</legend>
-                {{ order_form.phone_number | as_crispy_field }}
                 {{ order_form.postcode | as_crispy_field }}
                 {{ order_form.town_or_city | as_crispy_field }}
                 {{ order_form.street_address1 | as_crispy_field }}
@@ -107,6 +107,14 @@
                 </p>
 			</div>
         </form>
+    </div>
+    <!-- Loading spinner -->
+     <div id="loading-overlay">
+        <h1 class="text-light loading-spinner">
+            <span class="icon">
+                <iconify-icon icon="svg-spinners:tadpole" style="color: black;" width="98"></iconify-icon>
+            </span>
+        </h1>
     </div>
 {% endblock %}
 
