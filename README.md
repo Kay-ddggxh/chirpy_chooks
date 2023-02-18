@@ -20,7 +20,7 @@
 
 ### References/Documentation/Tutorials
 
-**Bag tools**:
+**Basket tools**:
 
 [Django Docs on creating custom template tags](https://docs.djangoproject.com/en/4.1/howto/custom-template-tags/)
 
