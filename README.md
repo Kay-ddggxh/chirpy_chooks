@@ -14,6 +14,16 @@
 - [django-crispy-forms](https://django-crispy-forms.readthedocs.io/en/latest/) (Control rendering behaviour of Django forms)
 - [Bootstrap5 template pack for django-crispy-forms](https://pypi.org/project/crispy-bootstrap5/)
 
+## Testing
+
+### Fixed bugs
+
+- **Placeholder for County dropdown list in checkout form**:
+
+    Placeholder "County *" for the dropdown menu in checkout form is not displaying in muted colour.
+
+- **Fix**: 
+
 ## Source Credits
 
 ### Online tools

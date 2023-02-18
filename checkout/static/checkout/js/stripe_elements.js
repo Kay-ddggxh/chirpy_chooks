@@ -116,3 +116,14 @@ form.addEventListener('submit', function (ev) {
         location.reload();
     })
 });
+
+let countySelectEl = document.getElementById("id_county");
+for (let option of countySelectEl) {
+    if (option.text === "County *") {
+        console.log(option.text)
+        option.setAttribute("disabled", "");
+        option.setAttribute("selected", "");
+        option.setAttribute("hidden", "");
+        option.classList.add("text-muted");
+    }
+}

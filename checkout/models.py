@@ -5,6 +5,65 @@ from django.db.models import Sum
 
 from products.models import Product
 
+PLACEHOLDER = 'County *'
+CARLOW = 'Carlow'
+CAVAN = 'Cavan'
+CLARE = 'Clare'
+CORK = 'Cork'
+DONEGAL = 'Donegal'
+DUBLIN = 'Dublin'
+GALWAY = 'Galway'
+KERRY = 'Kerry'
+KILDARE = 'Kildare'
+KILKENNY = 'Kilkenny'
+LAOIS = 'Laois'
+LEITRIM = 'Leitrim'
+LIMERICK = 'Limerick'
+LONGFORD = 'Longford'
+LOUTH = 'Louth'
+MAYO = 'Mayo'
+MEATH = 'Meath'
+MONAGHAN = 'Monaghan'
+OFFALY = 'Offaly'
+ROSCOMMON = 'Roscommon'
+SLIGO = 'Sligo'
+TIPPERARY = 'Tipperary'
+WATERFORD = 'Waterford'
+WESTMEATH = 'Westmeath'
+WEXFORD = 'Wexford'
+WICKLOW = 'Wicklow'
+
+
+COUNTIES = [
+    (PLACEHOLDER, 'County *'),
+    (CARLOW, 'Carlow'),
+    (CAVAN, 'Cavan'),
+    (CLARE, 'Clare'),
+    (CORK, 'Cork'),
+    (DONEGAL, 'Donegal'),
+    (DUBLIN, 'Dublin'),
+    (GALWAY, 'Galway'),
+    (KERRY, 'Kerry'),
+    (KILDARE, 'Kildare'),
+    (KILKENNY, 'Kilkenny'),
+    (LAOIS, 'Laois'),
+    (LEITRIM, 'Leitrim'),
+    (LIMERICK, 'Limerick'),
+    (LONGFORD, 'Longford'),
+    (LOUTH, 'Louth'),
+    (MAYO, 'Mayo'),
+    (MEATH, 'Meath'),
+    (MONAGHAN, 'Monaghan'),
+    (OFFALY, 'Offaly'),
+    (ROSCOMMON, 'Roscommon'),
+    (SLIGO, 'Sligo'),
+    (TIPPERARY, 'Tipperary'),
+    (WATERFORD, 'Waterford'),
+    (WESTMEATH, 'Westmeath'),
+    (WEXFORD, 'Wexford'),
+    (WICKLOW, 'Wicklow'),
+]
+
 
 class Order(models.Model):
     order_number = models.CharField(max_length=32, null=False, editable=False)
@@ -15,7 +74,9 @@ class Order(models.Model):
     town_or_city = models.CharField(max_length=40, null=False, blank=False)
     street_address1 = models.CharField(max_length=80, null=False, blank=False)
     street_address2 = models.CharField(max_length=80, null=True, blank=True)
-    county = models.CharField(max_length=80, null=True, blank=True)
+    county = models.CharField(
+        max_length=80, null=False, blank=False,
+        choices=COUNTIES, default=PLACEHOLDER)
     date = models.DateTimeField(auto_now_add=True)
     delivery_cost = models.DecimalField(
         max_digits=6, decimal_places=2, null=False, default=0)
