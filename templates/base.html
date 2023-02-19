@@ -92,7 +92,7 @@
 								Profile
 							</a>
 							<ul class="dropdown-menu">
-								<li><a class="dropdown-item" href="">Manage Profile</a></li>
+								<li><a class="dropdown-item" href="{% url 'profile' %}">Manage Profile</a></li>
 								{% if request.user.is_superuser %}
 								<li><a class="dropdown-item" href="">Manage Products</a></li>
 								{% endif %}
@@ -143,8 +143,11 @@
 		</div>
 	{% endif %}
 
-	{% block content %}
-	{% endblock %}
+	<!-- MAIN PAGE CONTENT -->
+	<div class="container mb-5">
+		{% block content %}
+		{% endblock %}
+	</div>
 
 	<!-- PAGE FOOTER - START -->
 	<footer>	
@@ -198,6 +201,7 @@
 	<!-- PAGE FOOTER - END -->
 
 	{% block postloadjs %}
+		
 		 <script type="text/javascript">
 		 	// Bootstrap boilerplate JS for toast handling
 			let toast = bootstrap.Toast.getOrCreateInstance(document.querySelector('.toast'));

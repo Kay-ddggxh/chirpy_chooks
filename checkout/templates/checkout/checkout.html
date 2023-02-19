@@ -53,7 +53,7 @@
                     </tr>
                 </table>
         </div>
-        <form action="#" method="POST" id="payment-form">
+        <form action="{% url 'checkout' %}" method="POST" id="payment-form">
             {% csrf_token %}
             <fieldset class="mb-4">
                 <legend>Personal Details</legend>

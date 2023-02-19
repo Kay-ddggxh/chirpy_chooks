@@ -38,6 +38,22 @@ p {
 }
 
 
+/* User authentication pages (sign up, login, logout) */
+
+.auth-container {
+    max-width: 600px;
+}
+
+.auth-btn {
+    color: #000;
+    background-color: var(--primary-color-dark);
+    padding: .4em;
+    margin: .5em;
+    border: none;
+    border-radius: 4px;
+}
+
+
 /* Header and Navigation styling */
 
 .header-banner {
@@ -120,13 +136,15 @@ p {
 }
 
 .shop-now-btn:hover,
-.basket-form-btn:hover {
+.basket-form-btn:hover,
+.auth-btn:hover {
     color: #000;
     background-color: var(--primary-color);
 }
 
 .shop-now-btn:active,
-.basket-form-btn:active {
+.basket-form-btn:active,
+.auth-btn:active {
     transform: scale(1.05);
     transition: ease-in-out;
 }
