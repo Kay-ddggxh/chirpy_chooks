@@ -165,6 +165,10 @@
                 </div>
             </div>
         </div>
-        <a href="{% url 'categories' %}" class="shop-now-btn">Back to products</a>
+        {% if from_profile %}
+            <a href="{% url 'profile' %}" class="basket-form-btn">Back to Profile</a>
+        {% else %}
+            <a href="{% url 'categories' %}" class="shop-now-btn">Back to products</a>
+        {% endif %}
     </div>
 {% endblock %}

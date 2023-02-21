@@ -121,7 +121,17 @@ p {
 /* Home page styling */
 
 .hero-img {
-    width: 100%;
+    /* 
+    break image out of parent container
+    source code: https://gomakethings.com/how-to-break-an-image-out-of-its-parent-container-with-css/#:~:text=.full%2Dwidth%20%7B%0A%09left%3A%2050%25%3B%0A%09margin%2Dleft%3A%20%2D50vw%3B%0A%09margin%2Dright%3A%20%2D50vw%3B%0A%09max%2Dwidth%3A%20100vw%3B%0A%09position%3A%20relative%3B%0A%09right%3A%2050%25%3B%0A%09width%3A%20100vw%3B%0A%7D
+    */
+    left: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+    max-width: 100vw;
+    position: relative;
+    right: 50%;
+    width: 100vw;
 }
 
 .shop-now-btn,
@@ -131,7 +141,6 @@ p {
     text-decoration: none;
     font-size: 2rem;
     padding: .5em;
-    margin: .5em 0;
     border-radius: 4px;
 }
 
@@ -213,7 +222,6 @@ p {
 .basket-form-btn {
     border: none;
     font-size: 1.2rem;
-    margin: 1em 2em;
 }
 
 /* Shopping basket styling */
