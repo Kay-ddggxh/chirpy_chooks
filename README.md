@@ -22,7 +22,20 @@
 
     Placeholder "County *" for the dropdown menu in checkout form is not displaying in muted colour.
 
-- **Fix**: 
+    **Fix**:
+
+- **"Full Name" field in checkout not auto-filled**:
+
+    In the checkout view, the "Full Name" field remains blank in the payment form when the rest of the form is pre-populated with the user's saved informations.
+
+    **Fix**:
+
+- **Payment form submits without "County" field filled in**:
+
+    In the checkout view, the "County" field of the payment should be required. However, the form submits even without filling in the field.
+
+    **Fix**:
+
 
 ## Source Credits
 
