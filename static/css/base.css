@@ -37,6 +37,14 @@ p {
     font-size: 1.2rem;
 }
 
+button {
+    line-height: normal;
+}
+
+button:hover {
+    font-weight: 600;
+}
+
 
 /* User authentication pages (sign up, login, logout) */
 
@@ -139,8 +147,8 @@ p {
     color: #000;
     background-color: var(--primary-color-dark);
     text-decoration: none;
-    font-size: 2rem;
     padding: .5em;
+    border: none;
     border-radius: 4px;
 }
 
@@ -217,11 +225,6 @@ p {
 .detail-list {
     font-size: 1.3rem;
     line-height: 2;
-}
-
-.basket-form-btn {
-    border: none;
-    font-size: 1.2rem;
 }
 
 /* Shopping basket styling */

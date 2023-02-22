@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+    <h1>Product Management</h1>
+
+    <h2 class="mb-3 mt-5 pb-2 border-bottom">Add product</h2>
+ 
+
+    <div class="row">
+        <div class="col-12 col-md-6">
+            <form method="POST" action="{% url 'add_product' %}" class="form mb-2" enctype="multipart/form-data">
+                {% csrf_token %}
+                {{ form | crispy }}
+                <div>
+                    <a class="basket-form-btn" href="{% url 'categories' %}">Cancel</a>
+                    <button class="shop-now-btn" type="submit">Add Product</button>
+                </div>
+            </form>
+        </div>            
+    </div>
+    
+{% endblock %}
