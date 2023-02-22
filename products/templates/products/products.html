@@ -7,8 +7,8 @@
     <div class="container-fluid">
         <div class="row d-flex justify-content-evenly card-container">
             {% for product in products%}
-                <div class="product-card">
-                    <a href="{% url 'product_detail' product.id %}" class="product-link">
+                <div class="product-card mb-5">
+                    <a href="{% url 'product_detail' product.id %}" class="product-link mb-1">
                         {% if product.image %}
                             <img class="product-img" src="{{ product.image.url }}" alt="{{ product.breed }}">
                         {% else %}
@@ -16,6 +16,12 @@
                         {% endif %}
                         <h2 class="product-link-title">{{ product.breed }}</h2>
                     </a>
+                    {% if request.user.is_superuser %}
+                        <small>
+                            <a href="{% url 'edit_product' product.id %}">Edit</a> | 
+                            <a class="text-danger" href="{% url 'delete_product' product.id %}">Delete</a>
+                        </small>
+                    {% endif %}
                 </div>
             {% endfor %}
        </div>

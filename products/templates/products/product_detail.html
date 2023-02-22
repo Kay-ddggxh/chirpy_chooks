@@ -5,7 +5,21 @@
 <a  class="m-4 ms-5" href="{% url 'products' %}?category={{ product.category }}">Back to {{ product.category }}</a>
 <h1>{{ product.breed }}</h1>
 <div class="detail-container">
-    <img class="detail-img px-1" src="{{ product.image.url }}" alt="{{ product.breed }}">
+    <div>
+        {% if product.image %}
+            <img class="detail-img px-1" src="{{ product.image.url }}" alt="{{ product.breed }}">
+        {% else %}
+            <img class="detail-img px-1" src="{{ MEDIA_URL }}noimage.png" alt="{{ product.breed }}">
+        {% endif %}
+
+         {% if request.user.is_superuser %}
+            <small>
+                <a href="{% url 'edit_product' product.id %}">Edit</a> | 
+                <a class="text-danger" href="{% url 'delete_product' product.id %}">Delete</a>
+            </small>
+        {% endif %}
+    </div>
+
     <div class="detail-info px-4">
         <ul class="detail-list">
             <li class="detail-list_item">{{ product.description }}</li>
