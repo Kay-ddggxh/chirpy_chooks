@@ -19,7 +19,11 @@
                     {% for item in basket_items %}
                         <tr>
                             <td class="w-25">
-                                <img class="basket-img" src="{{ item.product.image.url }}" alt="{{ item.product.breed }}">
+                                {% if item.product.image %}
+                                    <img class="basket-img" src="{{ item.product.image.url }}" alt="{{ item.product.breed }}">
+                                {% else %}
+                                    <img class="basket-img" src="{{ MEDIA_URL }}noimage.png" alt="{{ item.product.breed }}">
+                                {% endif %}
                                 {{ item.product.breed }}
                             </td>
                             <td class="text-end">€ {{ item.product.price }}</td>

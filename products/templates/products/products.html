@@ -9,7 +9,11 @@
             {% for product in products%}
                 <div class="product-card">
                     <a href="{% url 'product_detail' product.id %}" class="product-link">
-                        <img class="product-img" src="{{ product.image.url }}" alt="{{ product.breed }}">
+                        {% if product.image %}
+                            <img class="product-img" src="{{ product.image.url }}" alt="{{ product.breed }}">
+                        {% else %}
+                            <img class="product-img" src="{{ MEDIA_URL }}noimage.png" alt="{{ product.breed }}">
+                        {% endif %}
                         <h2 class="product-link-title">{{ product.breed }}</h2>
                     </a>
                 </div>

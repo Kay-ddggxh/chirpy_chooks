@@ -94,7 +94,7 @@
 							<ul class="dropdown-menu">
 								<li><a class="dropdown-item" href="{% url 'profile' %}">Manage Profile</a></li>
 								{% if request.user.is_superuser %}
-								<li><a class="dropdown-item" href="">Manage Products</a></li>
+								<li><a class="dropdown-item" href="{% url 'add_product' %}">Manage Products</a></li>
 								{% endif %}
 							</ul>
 						</li>
