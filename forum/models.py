@@ -24,6 +24,7 @@ class Entry(models.Model):
     title = models.CharField(max_length=100, unique=True)
     slug = models.SlugField(max_length=100, unique=True)
     content = models.TextField()
+    excerpt = models.TextField(blank=True)
     create_date = models.DateField(auto_now_add=True)
     entry_type = models.ForeignKey(
         EntryType, on_delete=models.PROTECT, default=1, related_name="type")

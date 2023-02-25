@@ -14,7 +14,7 @@
     margin: 0;
 }
 
-/* General styling */
+/* General styling and utility classes */
 
 html {
     height: 100%;
@@ -35,6 +35,10 @@ h1 {
 p {
     line-height: 2;
     font-size: 1.2rem;
+}
+
+.logo-font {
+    font-family: 'Pacifico', cursive;
 }
 
 
@@ -185,7 +189,8 @@ button:hover {
 }
 
 .category-card,
-.product-card {
+.product-card,
+.forum-entry-card {
     width: fit-content;
     border: solid 2px var(--primary-color-dark);
     border-radius: 4px;
@@ -258,6 +263,42 @@ button:hover {
 .update-link,
 .remove-item {
     cursor: pointer;
+}
+
+/* Forum styling */
+
+.forum-entry-card {
+    max-width: 800px;
+    width: 80vw;
+    padding: 1em;
+}
+
+.forum-entry-card:hover {
+    border-color: var(--primary-color);
+    transform: scale(1.02);
+    transition: ease-in-out;
+    box-shadow: 0px 7px 3px -3px rgba(0, 0, 0, 0.3);
+}
+
+.forum-entry-link {
+    color: #000;
+    text-decoration: none;
+}
+
+.forum-entry-link:hover {
+    color: #000;
+
+}
+
+.type-label {
+    font-size: .8rem;
+    padding: .2em;
+    margin-bottom: 1.2em;
+}
+
+.entry-date {
+    font-size: 0.6rem;
+    margin-bottom: 0;
 }
 
 /* Footer styling */

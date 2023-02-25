@@ -6,4 +6,4 @@ class EntryForm(forms.ModelForm):
 
     class Meta:
         model = Entry
-        fields = ('title', 'entry_type', 'content')
+        fields = ('title', 'entry_type', 'excerpt', 'content',)

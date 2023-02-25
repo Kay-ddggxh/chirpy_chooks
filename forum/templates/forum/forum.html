@@ -1,6 +1,30 @@
 {% extends "base.html" %}
 {% load static %}
 
+{% block extra_css %}
+    <link rel="stylesheet" href="{% static 'forum/css/forum.css' %}">
+{% endblock %}
+
 {% block content %}
     <h1>Forum</h1>
+    <h2>Welcome to the <span class="logo-font">Chirpy Chooks</span> forum.</h2>
+    <p>
+        As a supplier of live poultry we want to make sure that both our birds and their 
+        owners are happy. For that reason you will find lots of interesting articles posted by our 
+        knowledgable breeders about general advice on poultry keeping, 
+        interesting facts about different breeds or the latest recommendations on feeds, bedding, 
+        pest control, etc.
+    </p>
+    {% for entry in entries %}
+        <div class="forum-entry-card">
+            <a href="" class="forum-entry-link">
+                <h3 class="entry-heading"><strong>{{ entry.title }}</strong></h3>   
+                <div class="type-label btn btn-colour-bg">{{ entry.entry_type }}</div> 
+                {% if entry.excerpt %}
+                    <p class="excerpt">{{ entry.excerpt }}</p>
+                {% endif %} 
+                <p class="entry-date text-muted">{{ entry.create_date }}</p>
+            </a>
+        </div>
+    {% endfor %}
 {% endblock %}
