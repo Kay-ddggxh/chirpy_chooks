@@ -3,8 +3,9 @@ from django.db import models
 
 class EntryType(models.Model):
     """
-    Defines tag (category) object
+    Defines type (category) object
     """
+
     name = models.CharField(max_length=80)
 
     def __str__(self):
@@ -12,9 +13,14 @@ class EntryType(models.Model):
 
 
 class Entry(models.Model):
-    """
-    Defines Haiku object
-    """
+
+    class Meta:
+        """
+        Ensure correct plural of Entry
+        in admin UI
+        """
+        verbose_name_plural = 'Entries'
+
     title = models.CharField(max_length=100, unique=True)
     slug = models.SlugField(max_length=100, unique=True)
     content = models.TextField()

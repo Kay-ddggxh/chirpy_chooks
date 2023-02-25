@@ -4,7 +4,7 @@
         <div class="input-group justify-content-end">
             
             <div class="input-group-prepend">
-                <button class="decrement-qty basket-form-btn"
+                <button class="decrement-qty btn btn-colour-bg m-1"
                     data-item_id="{{ item.item_id }}" id="decrement-qty_{{ item.item_id }}">
                     <b>
                         -
@@ -12,13 +12,13 @@
                 </button>
             </div>
             
-            <input class="form-control form-control-sm qty_input text-end" type="number"
+            <input class="form-control form-control-sm qty_input text-end rounded" type="number"
                 name="quantity" value="{{ item.quantity }}" min="1" max="99"
                 data-item_id="{{ item.item_id }}"
                 id="id_qty_{{ item.item_id }}">
             
             <div class="input-group-append">
-                <button class="increment-qty basket-form-btn"
+                <button class="increment-qty btn btn-colour-bg m-1"
                     data-item_id="{{ item.item_id }}" id="increment-qty_{{ item.item_id }}">
                     <b>
                         +

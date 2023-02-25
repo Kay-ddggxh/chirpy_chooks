@@ -81,7 +81,7 @@
 							</ul>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link" aria-current="page" href="">Forum</a>
+							<a class="nav-link" aria-current="page" href="{% url 'forum' %}">Forum</a>
 						</li>
 						<li class="nav-item">
 							<a class="nav-link" href="">Contact Us</a>
@@ -95,6 +95,7 @@
 								<li><a class="dropdown-item" href="{% url 'profile' %}">Manage Profile</a></li>
 								{% if request.user.is_superuser %}
 								<li><a class="dropdown-item" href="{% url 'add_product' %}">Manage Products</a></li>
+								<li><a class="dropdown-item" href="{% url 'create_entry' %}">Post in Forum</a></li>
 								{% endif %}
 							</ul>
 						</li>

@@ -84,6 +84,12 @@ On their site, Chirpy Chooks also host a forum about all things poultry. Article
 
     **Fix**:
 
+- **Verbose name in "Entry" model not working**:
+
+    In forum app, the model ``Entry`` has an added Meta class to set the verbose name in the admin interface to the correct plural "Entries". The name in the admin panel however shows "Entrys".
+
+    **Fix**:
+
 
 
 ## Deployment
