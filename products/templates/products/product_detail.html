@@ -42,8 +42,13 @@
             </div>
            
             <div class="input-group mt-3">
-                <a href="{% url 'categories' %}" class="basket-form-btn rounded">Browse more</a>
-                <input type="submit" class="basket-form-btn rounded" value="Add to Basket">
+                <a href="{% url 'categories' %}" class="btn btn-white-bg rounded">
+                    <span class="icon">
+                        <iconify-icon inline icon="ion:chevron-back-circle" width="16"></iconify-icon>
+                    </span>
+                    Browse more
+                </a>
+                <input type="submit" class="btn btn-colour-bg rounded" value="Add to Basket">
                 <input type="hidden" name="redirect_url" value="{{ request.path }}">  
             </div>
          

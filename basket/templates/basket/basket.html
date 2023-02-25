@@ -4,9 +4,8 @@
 
 {% block content %}
     <h1>Shopping Basket</h1>
-    <div class="container">
         {% if basket_items %}
-            <div class="table-responsive">
+            <div class="table-responsive mt-5">
                 <table class="table table-borderless">
                     <thead>
                         <tr class="border-bottom border-secondary">
@@ -53,14 +52,28 @@
                 </table>
             </div>
             <div class="float-end my-5">
-                <a href="{% url 'categories' %}" class="basket-form-btn">Keep Shopping</a>
-                <a href="{% url 'checkout' %}" class="basket-form-btn mx-0">Go to Checkout</a>
+                <a href="{% url 'categories' %}" class="btn btn-white-bg">
+                    <span class="icon">
+                        <iconify-icon inline icon="ion:chevron-back-circle" width="16"></iconify-icon>
+                    </span>
+                    Keep Shopping
+                </a>
+                <a href="{% url 'checkout' %}" class="btn btn-colour-bg mx-0">
+                    <span class="icon">
+                        <iconify-icon inline icon="mdi:cash-lock" width="16"></iconify-icon>
+                    </span>
+                    Go to Checkout
+                </a>
             </div>
         {% else %}
-            <p>Basket is empty.</p>
-            <a href="{% url 'categories' %}" class="shop-now-btn mx-5 align-self-start">Back to products</a>
+            <p class="mt-5">Basket is empty.</p>
+            <a href="{% url 'categories' %}" class="btn btn-colour-bg align-self-start">
+                <span class="icon">
+                    <iconify-icon inline icon="ion:chevron-back-circle" width="16"></iconify-icon>
+                </span>
+                Back to products
+            </a>
         {% endif %}
-    </div>
 {% endblock %}
 
 {% block postloadjs %}

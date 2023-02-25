@@ -12,9 +12,15 @@
             <form method="POST" action="{% url 'add_product' %}" class="form mb-2" enctype="multipart/form-data">
                 {% csrf_token %}
                 {{ form | crispy }}
-                <div>
-                    <a class="basket-form-btn" href="{% url 'categories' %}">Cancel</a>
-                    <button class="shop-now-btn" type="submit">Add Product</button>
+                <div class="mt-5">
+                    <a class="btn btn-white-bg" href="{% url 'categories' %}">
+                        <iconify-icon inline icon="material-symbols:cancel" width="16"></iconify-icon>
+                        Cancel
+                    </a>
+                    <button class="btn btn-colour-bg" type="submit">
+                        <iconify-icon icon="material-symbols:add-circle-rounded" width="16"></iconify-icon>
+                        Add Product
+                    </button>
                 </div>
             </form>
         </div>            

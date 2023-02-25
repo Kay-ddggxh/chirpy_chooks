@@ -8,7 +8,7 @@
 
 {% block content %}
     <h1>Checkout</h1>
-    <div class="container checkout-container">
+    <div class="checkout-container mt-5">
         <div class="order-summery">
             <h2>Order Summery</h2>
             <table class="table table-borderless">
@@ -89,13 +89,13 @@
                 <input type="hidden" value="{{ client_secret }}" name="client_secret">
             </fieldset>
             <div class="text-right mt-5 mb-2 float-end">                    
-                <a href="{% url 'basket' %}" class="btn back-to-basket-btn">
+                <a href="{% url 'basket' %}" class="btn btn-white-bg">
                     <span class="icon">
                         <iconify-icon inline icon="ion:chevron-back-circle" width="16"></iconify-icon>
                     </span>
                     <span class="font-weight-bold">Edit Basket</span>
                 </a>
-                <button id="submit-button" class="btn pay-now-btn">
+                <button id="submit-button" class="btn btn-colour-bg">
                     <span class="icon">
                         <iconify-icon inline icon="material-symbols:lock" width="14"></iconify-icon>
                     </span>

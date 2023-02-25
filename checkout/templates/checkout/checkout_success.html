@@ -166,9 +166,19 @@
             </div>
         </div>
         {% if from_profile %}
-            <a href="{% url 'profile' %}" class="basket-form-btn">Back to Profile</a>
+            <a href="{% url 'profile' %}" class="btn btn-colour-bg">
+                <span class="icon">
+                        <iconify-icon inline icon="ion:chevron-back-circle" width="16"></iconify-icon>
+                </span>
+                Back to Profile
+            </a>
         {% else %}
-            <a href="{% url 'categories' %}" class="shop-now-btn">Back to products</a>
+            <a href="{% url 'categories' %}" class="btn btn-colour-bg">
+                <span class="icon">
+                        <iconify-icon inline icon="ion:chevron-back-circle" width="16"></iconify-icon>
+                </span>
+                Back to products
+            </a>
         {% endif %}
     </div>
 {% endblock %}

@@ -8,27 +8,6 @@
     margin-left: 3em;
 }
 
-.back-to-basket-btn {
-    border: 2px solid var(--primary-color);
-    margin-right: 2em;
-}
-
-.pay-now-btn {
-    border: 2px solid var(--primary-color);
-}
-
-.pay-now-btn,
-.back-to-basket-btn:hover {
-    background-color: var(--primary-color);
-}
-
-.pay-now-btn:hover {
-    background-color: #fff;
-}
-
-.btn:hover {
-    font-weight: 600;
-}
 
 /* Stripe elements styling */
 
