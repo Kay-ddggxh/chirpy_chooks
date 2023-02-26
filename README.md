@@ -51,6 +51,7 @@ On their site, Chirpy Chooks also host a forum about all things poultry. Article
 - [django-allauth](https://django-allauth.readthedocs.io/en/latest/) (User authentication)
 - [django-crispy-forms](https://django-crispy-forms.readthedocs.io/en/latest/) (Control rendering behaviour of Django forms)
 - [Bootstrap5 template pack for django-crispy-forms](https://pypi.org/project/crispy-bootstrap5/)
+- [django-summernote](https://github.com/summernote/django-summernote) (WYSIWYG HTML editor)
 
 ### Payment processing
 

@@ -309,6 +309,10 @@ button:hover {
     width: 100%;
 }
 
+#id_excerpt {
+    height: 6rem;
+}
+
 /* Footer styling */
 
 footer {

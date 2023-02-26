@@ -52,6 +52,7 @@ INSTALLED_APPS = [
     'forum',
     'crispy_forms',
     'crispy_bootstrap5',
+    'django_summernote',
 ]
 
 MIDDLEWARE = [
@@ -69,6 +70,25 @@ ROOT_URLCONF = 'chirpy_chooks.urls'
 CRISPY_ALLOWED_TEMPLATE_PACKS = 'bootstrap5'
 
 CRISPY_TEMPLATE_PACK = 'bootstrap5'
+
+SUMMERNOTE_THEME = 'bs5'
+
+SUMMERNOTE_CONFIG = {
+    # Summernote customisation
+    'summernote': {
+        # Change editor size
+        'width': '100%',
+
+        # Toolbar customization
+        # https://summernote.org/deep-dive/#custom-toolbar-popover
+        'toolbar': [
+            ['font', ['bold', 'italic', 'underline',]],
+            ['para', ['ul', 'ol',]],
+            ['insert', ['link',]],
+            ['view', ['fullscreen', 'help']],
+        ],
+    },
+}
 
 TEMPLATES = [
     {
