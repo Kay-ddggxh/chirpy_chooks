@@ -1,4 +1,4 @@
-from django.shortcuts import render, redirect, reverse
+from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 
@@ -17,6 +17,20 @@ def entry_list(request):
     }
 
     return render(request, 'forum/forum.html', context)
+
+
+def entry_detail(request, slug):
+    """
+    Displays individual forum entry
+    """
+
+    entry = get_object_or_404(Entry, slug=slug)
+
+    context = {
+        'entry': entry,
+    }
+
+    return render(request, 'forum/entry_detail.html', context)
 
 
 @login_required

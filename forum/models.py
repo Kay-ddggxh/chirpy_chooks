@@ -34,3 +34,8 @@ class Entry(models.Model):
 
     def __str__(self):
         return self.title
+
+    def save(self, *args, **kwargs):
+        if not self.slug:
+            self.slug = self.title.replace(' ', '-')
+        super().save(*args, **kwargs)

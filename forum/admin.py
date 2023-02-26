@@ -11,6 +11,8 @@ class EntryTypeAdmin(admin.ModelAdmin):
 class EntryAdmin(admin.ModelAdmin):
     list_display = (
         'title',
+        'slug',
         'entry_type',
         'create_date',
     )
+    prepopulated_fields = {'slug': ('title',)}

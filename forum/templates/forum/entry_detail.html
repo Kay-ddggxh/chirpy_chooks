@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block extra_css %}
+    <link rel="stylesheet" href="{% static 'forum/css/forum.css' %}">
+{% endblock %}
+
+{% block content %}
+    <h1>Forum</h1>
+    <h2>{{ entry.title }}</h2>
+    
+    
+{% endblock %}
