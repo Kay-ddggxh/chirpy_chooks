@@ -28,6 +28,7 @@ class Entry(models.Model):
     create_date = models.DateField(auto_now_add=True)
     entry_type = models.ForeignKey(
         EntryType, on_delete=models.PROTECT, default=1, related_name="type")
+    image = models.ImageField(null=True, blank=True)
 
     class Meta:
         ordering = ['-create_date']

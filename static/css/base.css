@@ -301,13 +301,12 @@ button:hover {
     margin-bottom: 0;
 }
 
-.entry-content {
-    display: flex;
-    justify-content: space-between;
-}
-
 .entry-content p {
     font-size: 1rem;
+}
+
+.entry-image {
+    width: 100%;
 }
 
 /* Footer styling */
@@ -398,13 +397,6 @@ footer {
     .detail-container {
         flex-direction: column;
     }
-
-    /* Forum styling */
-
-    .entry-content {
-        flex-direction: column-reverse;
-    }
-
 
     /* Footer styling */
     footer {
