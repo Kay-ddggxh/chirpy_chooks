@@ -46,7 +46,7 @@ def create_entry(request):
         if form.is_valid():
             entry = form.save()
             messages.success(request, 'New entry was posted to forum!')
-            # return redirect(reverse('product_detail', args=[product.id]))
+            # return redirect(reverse('entry_detail', args=[entry.slug]))
             return redirect(reverse('forum'))
         else:
             messages.error(
@@ -58,6 +58,39 @@ def create_entry(request):
     template = 'forum/create_entry.html'
     context = {
         'form': form,
+    }
+
+    return render(request, template, context)
+
+
+@login_required
+def edit_entry(request, slug):
+    """ Edit a forum post """
+    if not request.user.is_superuser:
+        messages.error(request, 'Sorry, only store owners can do that.')
+        return redirect(reverse('home'))
+
+    entry = get_object_or_404(Entry, slug=slug)
+    if request.method == 'POST':
+        form = EntryForm(request.POST, request.FILES, instance=entry)
+        if form.is_valid():
+            form.save()
+            messages.success(request, 'Successfully edited forum post!')
+            return redirect(reverse('entry_detail', args=[entry.slug]))
+        else:
+            messages.error(
+                request,
+                'Failed to update post. Please ensure the form is valid.')
+    else:
+        form = EntryForm(instance=entry)
+        messages.info(
+            request,
+            f'You are editing the forum post "{entry.title}"')
+
+    template = 'forum/edit_entry.html'
+    context = {
+        'form': form,
+        'entry': entry,
     }
 
     return render(request, template, context)

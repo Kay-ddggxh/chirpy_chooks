@@ -23,4 +23,9 @@
             <p>{{ entry.content }}</p>
         </div>
     </div> 
+     {% if request.user.is_superuser %}
+        <small>
+            <a href="{% url 'edit_entry' entry.slug %}">Edit</a> | 
+        </small>
+    {% endif %}
 {% endblock %}
