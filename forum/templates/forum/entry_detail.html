@@ -7,7 +7,13 @@
 
 {% block content %}
     <h1>Forum</h1>
-    <h2>{{ entry.title }}</h2>
-    
+    <div class="mt-5 border-bottom d-flex justify-content-between">
+        <h2 class="">{{ entry.title }}</h2>
+        <div class="type-label btn btn-colour-bg">{{ entry.entry_type }}</div> 
+    </div>
+    <div class="entry-content mt-5">
+        <p>{{ entry.content }}</p>
+        <img class="detail-img mx-3" src="{{ MEDIA_URL }}noimage.png" alt="">
+    </div>
     
 {% endblock %}
