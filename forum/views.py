@@ -94,3 +94,16 @@ def edit_entry(request, slug):
     }
 
     return render(request, template, context)
+
+
+@login_required
+def delete_entry(request, slug):
+    """ Delete forum entry """
+    if not request.user.is_superuser:
+        messages.error(request, 'Sorry, only store owners can do that.')
+        return redirect(reverse('home'))
+
+    entry = get_object_or_404(Entry, slug=slug)
+    entry.delete()
+    messages.success(request, 'Forum post was deleted.')
+    return redirect('/forum/')

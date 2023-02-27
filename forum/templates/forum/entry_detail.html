@@ -26,6 +26,7 @@
      {% if request.user.is_superuser %}
         <small>
             <a href="{% url 'edit_entry' entry.slug %}">Edit</a> | 
+            <a class="text-danger" href="{% url 'delete_entry' entry.slug %}">Delete</a>
         </small>
     {% endif %}
 {% endblock %}
