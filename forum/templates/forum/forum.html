@@ -15,11 +15,14 @@
         interesting facts about different breeds or the latest recommendations on feeds, bedding, 
         pest control, etc.
     </p>
+    {% if filtered %}
+        <a class="type-label btn btn-colour-bg" href="{% url 'forum' %}">Clear filter</a>
+    {% endif %}
     {% for entry in entries %}
         <div class="forum-entry-card">
             <a href="{% url 'entry_detail' entry.slug %}" class="forum-entry-link">
                 <h3 class="entry-heading"><strong>{{ entry.title }}</strong></h3>   
-                <div class="type-label btn btn-colour-bg">{{ entry.entry_type }}</div> 
+                <a class="type-label btn btn-colour-bg" href="{% url 'forum' %}?entry_type={{ entry.entry_type }}">{{ entry.entry_type }}</a>
                 <hr>
                 <div class="row">
                     <div class="col-12 col-sm-8">

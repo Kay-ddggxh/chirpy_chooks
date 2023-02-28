@@ -11,9 +11,19 @@ def entry_list(request):
     Renders all forum entries
     """
     entries = Entry.objects.all()
+    e_type = request.GET.get('entry_type')
+    filtered = False
+
+    if request.GET:
+        if 'entry_type' in request.GET:
+            e_type = request.GET.get('entry_type')
+            entries = entries.filter(entry_type__name=e_type)
+            filtered = True
 
     context = {
         'entries': entries,
+        'selected_type': e_type,
+        'filtered': filtered
     }
 
     return render(request, 'forum/forum.html', context)
@@ -24,7 +34,16 @@ def entry_detail(request, slug):
     Displays individual forum entry
     """
 
+    entries = Entry.objects.all()
     entry = get_object_or_404(Entry, slug=slug)
+    e_type = request.GET.get('entry_type')
+    filtered = False
+
+    if request.GET:
+        if 'entry_type' in request.GET:
+            e_type = request.GET.get('entry_type')
+            entries = entries.filter(entry_type__name=e_type)
+            filtered = True
 
     context = {
         'entry': entry,
