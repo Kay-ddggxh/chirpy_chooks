@@ -14,7 +14,7 @@
     <div class="row entry-content mt-5">
         <div class="col-12 col-md-4">
             {% if entry.image %}
-                <img class="entry-image" src="{{ entry.image.url }}" alt="{{ entry.image.url }}">
+                <img class="entry-image" src="{{ entry.image.url }}" alt="{{ entry.get_img_alt_value }}">
             {% else %}
                 <img class="entry-image" src="{{ MEDIA_URL }}noimage.png" alt="cartoon chicken">
             {% endif %}

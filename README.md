@@ -91,6 +91,14 @@ On their site, Chirpy Chooks also host a forum about all things poultry. Article
 
     **Fix**:
 
+- **``alt`` attribute on forum post image**:
+
+    The value for the ``alt`` attribute on images attached to forum posts needs to be descriptive to adhere to accessibility standards.
+
+    **Fix**:
+
+    Create ``get_img_alt_value`` helper function in ``Entry`` model of forum app.
+
 
 
 ## Deployment

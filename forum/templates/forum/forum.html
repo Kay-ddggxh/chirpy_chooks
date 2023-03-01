@@ -32,7 +32,7 @@
                     </div>
                     <div class="col-12 col-sm-4">
                         {% if entry.image %}
-                            <img class="entry-image" src="{{ entry.image.url }}" alt="{{ entry.image.url }}">
+                            <img class="entry-image" src="{{ entry.image.url }}" alt="{{ entry.get_img_alt_value }}">
                         {% else %}
                             <img class="entry-image w-50" src="{{ MEDIA_URL }}noimage.png" alt="cartoon chicken">
                         {% endif %}

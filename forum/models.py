@@ -40,3 +40,11 @@ class Entry(models.Model):
         if not self.slug:
             self.slug = self.title.replace(' ', '-')
         super().save(*args, **kwargs)
+
+    def get_img_alt_value(self):
+        """
+        returns descriptive name for alt attribute on entry image
+        """
+        img_alt_value = self.image.name.replace('-', ' ').split('.', 1)[0]
+
+        return img_alt_value
