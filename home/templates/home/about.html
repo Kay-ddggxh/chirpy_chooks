@@ -1,0 +1,80 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+    <img src="/media/freerange-hens.jpg" alt="free range chickens" class="hero-img">
+    <main>
+        <div class="container mb-5 d-flex flex-column">
+            <h1>About Us</h1>
+            <section class="mt-4">
+                <p>
+                    Here at <span class="logo-font">Chirpy Chooks</span> we take pride in raising quality poultry while adhering 
+                    to the highest standards of animal welfare. This not only makes for happy, healthy and productive birds, but also 
+                    for satisfied customers and easy poultry management with great rewards. 
+                </p>  
+            </section>
+            <section class="mt-4">
+                <h2 class="mb-3">Delivery and Pick-Up information</h2>
+                <p>
+                    As our products are live animals, we are unable to offer shipment via postal service or courier. <br>
+                    We do however offer an arranged home delivery service for counties <strong>Limerick, Clare and Galway</strong>.
+                    Once your order is close to completion, you will be contacted to arrange a delivery date.
+                </p>
+                <p>
+                    For customers located outside of the specified counties, pick-up is available during our opening hours at the 
+                    <span class="logo-font">Chirpy Chooks</span> farm. You will be notified once your order is ready for collection.
+                </p>
+            </section>
+            <section class="mt-4">
+                <h2 class="mb-3">Contact Us</h2>
+                <p>
+                    Please get in touch with us for any queries regarding your order, delivery/pick-up or general product information. <br>
+                    We are also happy to offer advice before or after your purchase with us. If you can't find your questions answered in our 
+                    <a href="{% url 'forum' %}">Forum</a>, please reach out and we'll be glad to help!
+
+                </p>
+                <div class="row">
+                    <div class="col-12 col-md-6 mt-4">
+                        <address class="fs-4">
+                            <h3 class="text-uppercase">How to reach us:</h3>
+                            Chirpy Chooks Farm <br>
+                            Ballyhen <br>
+                            Scarriff <br>
+                            Co. Clare <br>
+                            X00 Y00Z <br>
+                            <div class="mt-3"><iconify-icon inline icon="entypo:email"></iconify-icon> info@chirpychooks.ie</div>
+                            <div class="mt-2"><iconify-icon inline icon="ph:phone-light"></iconify-icon> 065 000000</div>
+                        </address>
+                    </div>
+                    <div class="col-12 col-md-6 mt-4">
+                        <div aria-label="opening-hours">
+                            <h3 class="text-uppercase">When to reach us:</h3>
+                            <table class="fs-5">
+                                <tr class="lh-lg">
+                                    <td class="pe-5">Monday</td>
+                                    <td>9:00 - 17:00</td>
+                                </tr>
+                                <tr class="lh-lg">
+                                    <td class="pe-5">Tuesday</td>
+                                    <td>9:00 - 17:00</td>
+                                </tr>
+                                <tr class="lh-lg">
+                                    <td class="pe-5">Wednesday</td>
+                                    <td>9:00 - 17:00</td>
+                                </tr>
+                                <tr class="lh-lg">
+                                    <td class="pe-5">Thursday</td>
+                                    <td>9:00 - 17:00</td>
+                                </tr>
+                                <tr class="lh-lg">
+                                    <td class="pe-5">Friday</td>
+                                    <td>9:00 - 17:00</td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+{% endblock %}
