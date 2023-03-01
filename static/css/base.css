@@ -334,6 +334,13 @@ footer {
     font-size: 2.5rem;
 }
 
+.privacy-link {
+    text-transform: uppercase;
+    color: #000;
+    flex-shrink: 0;
+    padding-right: 3em;
+}
+
 .newsletter-toggle-container {
     display: none;
 }
@@ -406,6 +413,10 @@ footer {
     footer {
         flex-direction: column;
         padding: .6rem 0;
+    }
+
+    .privacy-link {
+        padding: .5em 0;
     }
 
     /* Newsletter signup */
