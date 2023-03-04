@@ -7,6 +7,13 @@ On their site, Chirpy Chooks also host a forum about all things poultry. Article
 
 ## Table of Contents
 
+- [UI/UX](#uiux)
+    - [Agile](#agile)
+    - [Wireframes](#wireframes)
+    - [Site Goals](#site-goals)
+    - [5 Planes of UX](#5-planes-of-ux)
+    - [Visual Design Choices](#visual-design-choices)
+
 - [Technologies Used](#technologies-used)
     - [Work Environments and Hosting](#work-environments-and-hosting)
     - [Python Libraries](#python-libraries)
@@ -32,6 +39,91 @@ On their site, Chirpy Chooks also host a forum about all things poultry. Article
     - [References/Documentation/Tutorials](#referencesdocumentationtutorials)
     - [Media and Styling](#media-and-styling)
     - [Content/Data](#contentdata)
+
+
+## UI/UX
+
+The overall design of the site follows a simplistic, earthy style. This reflects the product and their usage themselves, as well as the kind of lifestyle potential customers would potentially aspire to. 
+
+As this business is not dealing in novelty products but livestock, flashy website features are currently not implemented. This is down to the fact that most expected customers will be based in rural Ireland where internet connection is often very limited. Therefore the site should not be bloated with features that serve no purpose other than being showy.
+
+### Agile
+
+This project was designed and built using the agile approach. Right from the initial planning through to final development. To help visualise the process I created a [GitHub project](https://github.com/users/Kathrin-ddggxh/projects/8) and utilised the provided Kanban board method to split project elements into user stories and manageable tasks.
+
+To view all user stories including their required acceptance criterias and tasks, refer to the project linked to above.
+Each story also has been tagged with a label to signify how crucial a particular feature is to the overall workings and acceptability of the site.
+
+### Wireframes
+
+The initial [wireframes in Figma](https://www.figma.com/file/nwqbwNDvflu8tDjm4krxMq/Chirpy-Chooks?node-id=0%3A1&t=hiKzdsdeGZce4shs-1) are an overly simplified version of the finished product and merely served the purpose of listing most of the site's essential features.
+
+Not all features and functions are covered by these first drafts. For a full list of existing features see [Features](#features)
+
+<details>
+    <summary>
+        Wireframe images
+    </summary>
+    Images coming soon!
+</details>
+
+### Site Goals
+
+This site is the online shop of the fictional supplier of live poultry "Chirpy Chooks". This business is based in county Clare, Ireland and is aiming to cover a customer base in the whole mid-western region of Ireland. Mainly counties Limerick, Clare and Galway.
+
+On the site, customers can view different types of poultry the business breeds and offers. Poultry can be ordered and paid for via an intuitive, straight forward process. As the products are livestock, this business can not offer shipping. The customers are informed that orders must be collected from the business farm.
+
+"Chirpy Chooks" is very keen as a business to provide past and future customers with useful advise and support about poultry keeping. As well as general contact details, the shop's site also features a forum maintained by the business itself, where all visitors of the site can find helpful articles on various subjects related to poultry keeping.
+
+### 5 Planes of UX
+
+#### Strategy
+
+Addresses user's needs and product objectives.
+The user here has been identified as a person residing in the mid-western region of Ireland who is interested in or already is keeping poultry.
+Their needs are therefore a selection of different types of poultry (with different purposes), an easy way of making a selection from those and a simple payment method along with the selection process. 
+Outside of the purchasing needs, the user might also require advise and information on the products offered by the business. This is addressed in the site's forum page.
+
+*Site owner user:*
+
+The owner of the site (or business employee) wants to be able to maintain the site without effort and via an appealing UI.
+
+#### Scope
+
+Addresses what functions and features are within the scope of the project.
+Basic and essential e-commerce functionality was key to this project. This means that most features included are a basic requirement. Features like user sign up and login, user profile creation, checkout functionality and secure online payment had to be implemented, as well as basic CRUD funtionality for authorised users. For detailed explanation of all existing features see [Existing Features](#existing-features).
+Features discussed under [Future Features](#possible-future-features), while still within the possible scope of this project, were deemed unnecessary at this point in time.
+
+*Site owner user:*
+
+To meet the site owners basic needs, each product can be easily updated or deleted via the front-end interface. New products can also be added via the front-end. Forum posts are handled the same way. All these features are only accessible to authorised users.
+
+#### Structure
+
+Defines how users can navigate the site and utilise all existing features.
+The structure of the site is modelled on a basic e-commerce application with an additional forum page.
+The structure allows users to browse products and make purchases as well as visit the forum to find information about poultry. Authenticated users can store their personal information in a user profile for the purpose of faster order handling.
+
+*Site owner user:*
+
+All CRUD functionality is placed intuitively with the relevant features of the site (individual products, forum posts). A super-user can avail of the same navigation options as as any authenticated users. However, these include additional features limited to authorised users.
+
+#### Skeleton
+
+Puts features defined in structure into navigational elements.
+For a first outline of the project skeleton see [Wireframes](#wireframes).
+To guarantee intuitive navigation of the site, both the navbar and the main content follow a standard layout pattern that should be familiar to most users.
+The navbar provides links to the main features and functions of the site, varying based on whether a user is authenticated or not. On small to medium screen sizes a drop-down burger menu takes the place of the full navbar. A second-option home button is in place as a small logo, opposite all other nav links. According to research, this is also common practice.
+The shopping basket link in the navbar is being updated everytime a user adds an item (of a differnt type!) to the basket.
+Products and categories, as well as forum posts are listed in a card-style display.
+All forms are cleary labelled an inform the user of invalid fields. User feedback is represented throughout the whole site via alert pop-ups.
+Buttons and links are appropriately named.
+A footer with social media links (currently merely serve as placeholders) completes the "framing" effect of the site.
+
+#### Surface
+
+Addresses visual design and how to convey desired emotions and achieve desired effects.
+For more detail on the planning of the surface plane, see [Visual Design Choices](#visual-design-choices).
 
 
 ## Technologies Used
