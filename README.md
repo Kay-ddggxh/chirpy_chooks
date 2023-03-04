@@ -23,6 +23,11 @@ On their site, Chirpy Chooks also host a forum about all things poultry. Article
 
 - [Deployment](#deployment)
 
+- [Development](#development)
+    - [Fork](#fork)
+    - [Clone](#clone)
+    - [Download ZIP](#download-as-zip)
+
 - [Source Credits](#source-credits)
     - [References/Documentation/Tutorials](#referencesdocumentationtutorials)
     - [Media and Styling](#media-and-styling)
@@ -105,6 +110,36 @@ On their site, Chirpy Chooks also host a forum about all things poultry. Article
 
 This project was deployed using [Heroku](https://heroku.com/), [ElephantSQL](https://www.elephantsql.com/) and [AWS](https://aws.amazon.com/). For a full list libraries refer to [Technologies Used](#technologies-used).
 
+## Development
+
+The following options are available to work with this code or run in a local environment.
+
+### Fork
+
+Any changes made to a forked repository do not affect the original repository.
+
+- Log into GitHub and click on repository to download ([chirpy_chooks](https://github.com/Kathrin-ddggxh/chirpy_chooks))
+- Click the **Fork** buttonin the top right-hand corner
+- Select a different owner if necessary
+- Click **Create Fork**
+- The repo is now in your chosen account and can be cloned or changed
+
+### Clone
+
+Changes made to a cloned repository will affect the original one.
+
+- Navigate to the main page of the repostitory (this could be a forked instance)
+- Click on the **Code** dropdown menu above the list of files
+- Choose a method to copy the URL for the repository: either via **HTTPS**, by using an **SSH key**, or by using **GitHub CLI**
+- In your work environment, open Git Bash and change current directory to target location for cloned repository
+- Type ``git clone`` followed by the copied URL and press enter **Enter**
+
+### Download as ZIP
+
+- Log into GitHub and click on repository to download ([chirpy_chooks](https://github.com/Kathrin-ddggxh/chirpy_chooks))
+- Select **Code** and click "Download Zip" file
+- Once download is completed, extract ZIP file and use in your local environment
+
 ## Source Credits
 
 ### References/Documentation/Tutorials
@@ -162,6 +197,8 @@ The alert pop-up frames were rendered using [Bootstrap 5 toasts](https://getboot
 *laying-duck.jpg:* https://www.thehappychickencoop.com/raising-ducks-for-eggs/
 
 *noimage.png:* https://upload.wikimedia.org/wikipedia/commons/thumb/4/42/Chicken_cartoon_04.svg/300px-Chicken_cartoon_04.svg.png 
+
+All image used in the Facebook mock-up business page are my own, taken by myself of my own chickens!
 
 **Fonts:**
 
