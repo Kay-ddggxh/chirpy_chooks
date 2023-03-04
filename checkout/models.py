@@ -66,6 +66,8 @@ COUNTIES = [
     (WICKLOW, 'Wicklow'),
 ]
 
+STANDARD_DELIVERY_COST = 30
+
 
 class Order(models.Model):
     order_number = models.CharField(max_length=32, null=False, editable=False)
@@ -85,6 +87,7 @@ class Order(models.Model):
     date = models.DateTimeField(auto_now_add=True)
     delivery_cost = models.DecimalField(
         max_digits=6, decimal_places=2, null=False, default=0)
+    pick_up_required = models.BooleanField(default=False)
     order_total = models.DecimalField(
         max_digits=10, decimal_places=2, null=False, default=0)
     grand_total = models.DecimalField(
@@ -106,7 +109,18 @@ class Order(models.Model):
         """
         self.order_total = self.lineitems.aggregate(
             Sum('lineitem_total'))['lineitem_total__sum'] or 0
-        # if statement to determine free delivery based on address
+
+        # determine delivery options based on address and update
+        # delivery charge and grand_total
+        if (
+            self.county == 'Clare' or self.county == 'Limerick' or
+            self.county == 'Galway'
+           ):
+            self.delivery_cost = STANDARD_DELIVERY_COST
+        else:
+            self.delivery_cost = 0
+            self.pick_up_required = True
+
         self.grand_total = self.order_total + self.delivery_cost
         self.save()
 

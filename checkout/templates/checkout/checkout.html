@@ -38,8 +38,13 @@
                         </td>
                     </tr>
                     <tr>
-                        <td colspan="4" class="text-end">
+                        <td colspan="4" class="text-end" id="deliveryCost">
                             Delivery Cost: € {{ delivery | floatformat:2 }}
+                        </td>
+                    </tr>
+                    <tr> <!-- Element to be removed -->
+                        <td colspan="4" class="text-end" id="extraDeliveryCost">
+                            Delivery Cost: € {{ extra_delivery | floatformat:2 }}
                         </td>
                     </tr>
                     <tr>
@@ -47,8 +52,13 @@
                         <td colspan="2" class="text-end border-top border-secondary"></td>
                     </tr>
                     <tr>
-                        <td colspan="4" class="text-end">
+                        <td colspan="4" class="text-end" id="grandTotal">
                             <strong>Grand Total: € {{ grand_total | floatformat:2 }}</strong>
+                        </td>
+                    </tr>
+                    <tr> <!-- Element to be removed -->
+                        <td colspan="4" class="text-end" id="extraDeliveryGrandTotal">
+                            <strong>Grand Total: € {{ extra_delivery_grand_total | floatformat:2 }}</strong>
                         </td>
                     </tr>
                 </table>
@@ -67,6 +77,12 @@
                 {{ order_form.street_address2 | as_crispy_field }}
                 {{ order_form.town_or_city | as_crispy_field }}
                 {{ order_form.county | as_crispy_field }}
+                <p class="text-danger lh-sm d-none" id="countyErrorAlert">
+                    <small>
+                        Your selected county does not match the selected home delivery option. <br>
+                        Please <a href="{% url 'basket' %}">review your basket</a> or choose a matching county.
+                    </small>
+                </p>
                 {{ order_form.postcode | as_crispy_field }}
                 <div class="form-check form-check-inline float-right mr-0">
                     {% if user.is_authenticated %}
@@ -125,4 +141,27 @@
     {{ stripe_public_key|json_script:"id_stripe_public_key" }}
     {{ client_secret|json_script:"id_client_secret" }}
     <script src="{% static 'checkout/js/stripe_elements.js' %}"></script>
+
+    <script type="text/javascript">
+        // update delivery charge and grand total depending on county field value
+        let countyField = document.getElementById("id_county");
+        let countyErrorEl = document.getElementById("countyErrorAlert")
+        let deliveryCost = document.getElementById("deliveryCost")
+        let extraDeliveryCost = document.getElementById("extraDeliveryCost")
+        let grandTotal = document.getElementById("grandTotal")
+        let extraDeliveryGrandTotal = document.getElementById("extraDeliveryGrandTotal")
+        
+        countyField.addEventListener('change', function() {
+            if (this.value !== "Clare" && this.value !== "Galway" && this.value !== "Limerick") {
+                  if ({{ extra_delivery }} === 30) {
+                    countyErrorEl.classList.remove("d-none")
+                  }
+            } else {
+                console.log("still works")
+            }
+        });
+        
+        
+
+    </script>
 {% endblock %}

@@ -32,12 +32,22 @@
                     {% endfor %}
                     <tr class="border-top border-secondary">
                         <td colspan="4" class="text-end">
+                            {% include "basket/delivery_form.html" %}
+                        </td>
+                    </tr>
+                    <tr class="border-top border-secondary">
+                        <td colspan="4" class="text-end">
                             <strong>Basket Total: € {{ total | floatformat:2 }}</strong>
                         </td>
                     </tr>
                     <tr>
-                        <td colspan="4" class="text-end">
+                        <td colspan="4" class="text-end" id="basketDeliveryCost">
                             Delivery Cost: € {{ delivery | floatformat:2 }}
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="4" class="text-end d-none" id="updatedbasketDeliveryCost">
+                            Delivery Cost: € {{ extra_delivery | floatformat:2 }}
                         </td>
                     </tr>
                     <tr>
@@ -45,8 +55,13 @@
                         <td colspan="2" class="text-end border-top border-secondary"></td>
                     </tr>
                     <tr>
-                        <td colspan="4" class="text-end">
+                        <td colspan="4" class="text-end" id="basketGrandTotal">
                             <strong>Grand Total: € {{ grand_total | floatformat:2 }}</strong>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="4" class="text-end d-none" id="updatedBasketGrandTotal">
+                            <strong>Grand Total: € {{ extra_delivery_grand_total | floatformat:2 }}</strong>
                         </td>
                     </tr>
                 </table>

@@ -70,7 +70,7 @@ def checkout(request):
                     messages.error(request, (
                         "One of the products in your basket \
                         wasn't found in our database. "
-                        "Please call us for assistance!")
+                        "Please get in touch with us about this issue!")
                     )
                     order.delete()
                     return redirect(reverse('basket'))
