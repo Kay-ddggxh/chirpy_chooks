@@ -126,6 +126,28 @@ Addresses visual design and how to convey desired emotions and achieve desired e
 For more detail on the planning of the surface plane, see [Visual Design Choices](#visual-design-choices).
 
 
+### Visual Design Choices
+
+**Colour Scheme:**
+
+The site utilises one accent colour (``primary-color: #FED049``) and a slightly darker gradient of the same colour (``primary-color-dark: #ffbf00``) for the purpose of focusing in on elements. The colour was chosen for its warm, earthy quality, somewhat reminiscent of egg yolk. It also offer high enough colour contrast when used with a font colour of black and is therefore in keeping with accessibility standards.
+
+![primary colour](media/readme/primary-colour.png)
+
+![primary colour dark](media/readme/primary-colour-dark.png)
+
+**Fonts:**
+
+One extravagant font ("Pacifico") was chosen solely for the shops logo and can be found throughout the site where name branding is used.
+The main font ("Varela Round") combines ease or readability with friendly appearance. 
+For full despcription of font names and their sources see [Media and Styling](#media-and-styling)
+
+**Images and Icons:**
+
+All images of this site are purely related to the products offered in the store or relevant to the individual forum post. Apart from the banner image on the home page, the site refrains from using too many decorative elements.
+Icons used for the purpose of navigation are standards symbols which should be familiar to most users.
+For full despcription of all images and their sources see [Media and Styling](#media-and-styling).
+
 ## Technologies Used
 
 ### Work Environments and Hosting
