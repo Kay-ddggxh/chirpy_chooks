@@ -2,3 +2,39 @@
 
 ## Table of Contents
 
+- [Marketing Strategies](#marketing-strategies)
+
+## Marketing Strategies
+
+Any paid marketing strategies were beyond the scope and requirements for this project as it is a fictional business created by a student.
+
+- **Content Marketing => Forum**
+
+    The forum provides useful and engaging content for anybody interested in or already keeping poultry.
+    It also gives (potential) customers a feeling of constant support should they ever need advice on this subject, therefore creating a relationship with the business and a sense of loyalty.
+    The forum gives the business the opportunity to demonstrate their expertise and experience, as well as a willingness to help and educate others.
+
+- **Social Media Marketing => Mock FB page**
+
+    ![Facebook mock-up](media/readme/facebook-mockup.png)
+
+    The Facebook page ties in with the website's forum, promoting regular posts about important things to know about poultry keeping or interesting facts about specific breeds.
+    Customers get the chance to feel more connected with the business by direct interactions such as commenting on posts or messaging the business via Facebook. 
+    Overall, the shop's Facebook presence is the more interactive business aspect and makes it more approachable for customers.
+
+    As the mid-western region of Ireland (specifically East Clare where Chirpy Chooks is based) has seen a large influx of younger, alternative minded people in recent years, Facebook is a valid way of broadening the business' outreach.
+
+    A Facebook page could easily be extended into further social media presence such as Instagram or Twitter. Using software to automate the content sharing process, this would not result in an increase of work load.
+
+- **Location specific online presence => DoneDeal (not implemented)**
+
+    As Chirpy Chooks is a rural Irish business dealing in livestock, it would be quite appropriate to sell and advertise their products on [DoneDeal](https://www.donedeal.ie/), Ireland's largest buying and selling site. Most people resident in Ireland are very familiar with DoneDeal and also the older demographic, especially those of the agricultural community, use it a lot. Apart from motors, it's particularly popular for all farming related products and most independent Irish businesses that operate in that sector are also present on DoneDeal.
+
+    For the scope of this project, I did not actually create a real DoneDeal account for Chirpy Chooks. However, the above outline of the thought process is still relevant to the marketing strategy.
+
+- **Email Marketing => MailChimp Newsletter**
+
+    The MailChimp Newsletter subscription service is ideal for a small scale business like Chirpy Chooks as it is free and simple to set up.
+    Newsletter content could potentially be an early release of forum content, reducing the time needed for content creation.
+    The newsletter subscription is completely optional for customers. The service is represented on the site in the footer as a small form, rather than an obtrusive pop-up so many other sites resort to these days.
+
