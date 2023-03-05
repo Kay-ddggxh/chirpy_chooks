@@ -75,7 +75,17 @@ Not all features and functions are covered by these first drafts. For a full lis
     <summary>
         Wireframe images
     </summary>
-    Images coming soon!
+    <img src="media/readme/wireframes/homepage.png" alt="home-wireframe">
+    <img src="media/readme/wireframes/login.png" alt="login-wireframe">
+    <img src="media/readme/wireframes/signup.png" alt="signup-wireframe">
+    <img src="media/readme/wireframes/contact.png" alt="contact-wireframe">
+    <img src="media/readme/wireframes/profile.png" alt="profile-wireframe">
+    <img src="media/readme/wireframes/products.png" alt="products-wireframe">
+    <img src="media/readme/wireframes/product-detail.png" alt="product-detail-wireframe">
+    <img src="media/readme/wireframes/basket.png" alt="basket-wireframe">
+    <img src="media/readme/wireframes/checkout.png" alt="checkout-wireframe">
+    <img src="media/readme/wireframes/forum.png" alt="forum-wireframe">
+    <img src="media/readme/wireframes/forum-entry.png" alt="forum-entry-wireframe">
 </details>
 
 ### Site Goals
