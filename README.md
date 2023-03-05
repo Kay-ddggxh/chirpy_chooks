@@ -14,6 +14,15 @@ On their site, Chirpy Chooks also host a forum about all things poultry. Article
     - [5 Planes of UX](#5-planes-of-ux)
     - [Visual Design Choices](#visual-design-choices)
 
+- [Features](#features)
+    - [Existing Features](#existing-features)
+    - [Future Features](#possible-future-features)
+
+- [Database Design](#database-design)
+    - [Database Model](#database-model)
+    - [Custom Model](#custom-model)
+    - [CRUD](#crud)
+
 - [Technologies Used](#technologies-used)
     - [Work Environments and Hosting](#work-environments-and-hosting)
     - [Python Libraries](#python-libraries)
@@ -147,6 +156,39 @@ For full despcription of font names and their sources see [Media and Styling](#m
 All images of this site are purely related to the products offered in the store or relevant to the individual forum post. Apart from the banner image on the home page, the site refrains from using too many decorative elements.
 Icons used for the purpose of navigation are standards symbols which should be familiar to most users.
 For full despcription of all images and their sources see [Media and Styling](#media-and-styling).
+
+
+## Features
+
+### Existing Features
+
+### Possible Future Features
+
+**Extended product range**
+
+The shop has the potential to extend its product range to non-livestock products, such as bird coops, feed, bedding and miscellaneous.
+For the purpose of this project however, it was unnecessary to implement such a broad product database.
+
+**Automated pick-up date selection**
+
+Currently, the arrangment of a date for product collection is handled manually by shop employees via email or phone contact directly with the customer after order completion.
+This could be automated by including calendar element with date picker option to be used after an order is complete.
+
+
+## Database Design
+
+### Database Model
+
+The database model diagram was designed using [Lucidchart](https://lucid.app/lucidchart/dbaa86b5-9b37-4a80-a6f2-ed5048ab2100/edit?viewport_loc=-239%2C119%2C2609%2C1105%2C0_0&invitationId=inv_4bfac1de-d676-4e14-8e5d-9513944644e4).
+The first draft of the entity relationship diagram does not include all models used in the final database.
+
+![ERD](media/readme/erd.png)
+
+### Custom Model
+
+
+### CRUD
+
 
 ## Technologies Used
 
