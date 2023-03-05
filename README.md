@@ -14,6 +14,8 @@ On their site, Chirpy Chooks also host a forum about all things poultry. Article
     - [5 Planes of UX](#5-planes-of-ux)
     - [Visual Design Choices](#visual-design-choices)
 
+- [SEO and Marketing](#seo-and-marketing)
+
 - [Features](#features)
     - [Existing Features](#existing-features)
     - [Future Features](#possible-future-features)
@@ -158,6 +160,11 @@ Icons used for the purpose of navigation are standards symbols which should be f
 For full despcription of all images and their sources see [Media and Styling](#media-and-styling).
 
 
+## SEO and Marketing
+
+For an extensive overview of the marketing research for this project, please refer to this [SEO and Marketing documentation](MARKETING.md)
+
+
 ## Features
 
 ### Existing Features
@@ -225,6 +232,10 @@ The first draft of the entity relationship diagram does not include all models u
 
 
 ## Testing
+
+### Test Guide
+
+For extensive instructions on how to manually test this site and it's user stories, please refer to these [testing instructions](TESTING.md)
 
 ### Fixed bugs
 
