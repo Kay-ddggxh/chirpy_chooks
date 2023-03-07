@@ -340,6 +340,10 @@ The live feedback messages to alert user actions were implemented using the [Dja
 
 The alert pop-up frames were rendered using [Bootstrap 5 toasts](https://getbootstrap.com/docs/5.0/components/toasts/).
 
+**Custom error pages**:
+
+To implement custom error pages in Django I followed this [Cryce Truly tutorial](https://www.youtube.com/watch?v=3SKjPppM_DU&ab_channel=CryceTruly)
+
 
 ### Media and Styling
 

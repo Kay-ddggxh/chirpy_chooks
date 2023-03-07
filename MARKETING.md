@@ -2,7 +2,32 @@
 
 ## Table of Contents
 
+- [Keyword Research](#keyword-research)
 - [Marketing Strategies](#marketing-strategies)
+
+## Keyword Research
+
+### Initial list of Keywords to research
+
+- layer hens for sale Ireland
+- layer chickens for sale Ireland
+- layer ducks for sale Ireland
+- broiler chickens for sale Ireland
+- poultry sale west ireland
+- poultry/chicken/ducks for sale Clare, Limerick, Galway
+
+### Testing Keywords for volume and competition
+
+I tested several long-tail keywords using the website [Wordtracker](https://www.wordtracker.com/).
+Most keywords showed extremely low volume and competition.
+
+![broiler chickens ireland](media/readme/seo/broiler-chickens-ireland.png)
+![chickens sale ireland](media/readme/seo/chickens-sale-ireland.png)
+![layer ducks sale ireland](media/readme/seo/layer-ducks-sale-ireland.png)
+![point of lay chickens ireland](media/readme/seo/point-of-lay-chickens-ireland.png)
+![poultry sale clare ireland](media/readme/seo/poultry-sale-clare-ireland.png)
+![poultry sale galway ireland](media/readme/seo/poultry-sale-galway-ireland.png)
+
 
 ## Marketing Strategies
 
