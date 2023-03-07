@@ -375,7 +375,10 @@ The alert pop-up frames were rendered using [Bootstrap 5 toasts](https://getboot
 
 *noimage.png:* https://upload.wikimedia.org/wikipedia/commons/thumb/4/42/Chicken_cartoon_04.svg/300px-Chicken_cartoon_04.svg.png 
 
-All image used in the Facebook mock-up business page are my own, taken by myself of my own chickens!
+*chicken-question.jpg:* https://www.dreamstime.com/stock-photography-cartoon-chicken-doubt-yellow-little-bird-speech-bubble-question-mark-image30411162
+
+
+All images used in the **Facebook mock-up business page** are my own, taken by myself of my own chickens!
 
 **Fonts:**
 
