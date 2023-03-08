@@ -150,8 +150,12 @@ button:hover {
 }
 
 .navbar-toggler {
-    border: 1px solid rgb(65, 65, 65);
-    margin-left: 2em;
+    font-size: 2rem;
+    margin: 1em;
+}
+
+.toggler-icon iconify-icon {
+    margin-top: 5px;
 }
 
 /* Home page styling */

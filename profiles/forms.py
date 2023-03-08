@@ -4,7 +4,7 @@ from .models import UserProfile
 
 class UserProfileForm(forms.ModelForm):
     class Meta:
-        model = UserProfile()
+        model = UserProfile
         exclude = ('user',)
         widgets = {
             'county': forms.Select(attrs={'class': 'form-control'}),
