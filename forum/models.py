@@ -1,5 +1,7 @@
 from django.db import models
 
+from profiles.models import UserProfile
+
 
 class EntryType(models.Model):
     """
@@ -48,3 +50,22 @@ class Entry(models.Model):
         img_alt_value = self.image.name.replace('-', ' ').split('.', 1)[0]
 
         return img_alt_value
+
+
+class Response(models.Model):
+    """
+    Defines model for response to forum entry
+    """
+    entry = models.ForeignKey(
+        Entry, on_delete=models.CASCADE, related_name='response')
+    author = models.ForeignKey(
+        UserProfile, on_delete=models.CASCADE, related_name='author')
+    body = models.TextField()
+    create_date = models.DateField(auto_now_add=True)
+    approved = models.BooleanField(default=False)
+
+    class Meta:
+        ordering = ['-create_date']
+
+    def __str__(self):
+        return f"{self.user} commented on this post"
