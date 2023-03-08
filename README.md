@@ -290,6 +290,10 @@ For extensive instructions on how to manually test this site and it's user stori
 
     **Fix**:
 
+    Remove Boutique Ado inspired styling. This styling overwrote the original form styling and was not necessary or in keeping with other forms found on the site.
+
+    Also, make County field a non-required field. This was possible due to the removal of the conditional delivery charge functionality, for which the County field needed to be required (see [Future Features](#possible-future-features)).
+
 - **"Full Name" field in checkout not auto-filled**:
 
     In the checkout view, the "Full Name" field remains blank in the payment form when the rest of the form is pre-populated with the user's saved informations.

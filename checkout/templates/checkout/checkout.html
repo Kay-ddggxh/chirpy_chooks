@@ -67,12 +67,6 @@
                 {{ order_form.street_address2 | as_crispy_field }}
                 {{ order_form.town_or_city | as_crispy_field }}
                 {{ order_form.county | as_crispy_field }}
-                <p class="text-danger lh-sm d-none" id="countyErrorAlert">
-                    <small>
-                        Your selected county does not match the selected home delivery option. <br>
-                        Please <a href="{% url 'basket' %}">review your basket</a> or choose a matching county.
-                    </small>
-                </p>
                 {{ order_form.postcode | as_crispy_field }}
                 <div class="form-check form-check-inline float-right mr-0">
                     {% if user.is_authenticated %}

@@ -2,6 +2,16 @@
     width: 60%;
 }
 
+#payment-form label {
+    /* bootstrap text-muted class color */
+    color: #6c757d;
+}
+
+.asteriskField {
+    color: red;
+    padding-left: .5em;
+}
+
 .order-summery {
     float: right;
     width: 35%;
