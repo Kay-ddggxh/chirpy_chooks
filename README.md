@@ -191,6 +191,41 @@ For the purpose of this project however, it was unnecessary to implement such a 
 Currently, the arrangment of a date for product collection is handled manually by shop employees via email or phone contact directly with the customer after order completion.
 This could be automated by including calendar element with date picker option to be used after an order is complete.
 
+**Delivery depending on customer location**
+
+Initially I had planned to offer conditional delivery, provided a customer was resident in either County Galway, Clare or Limerick. This is due to the nature of the products. Live animals can not be shipped via postal service or courier. Delivery would need to be done by a shop employee with special transport crates, on an arranged day and as direct as possible. As this is supposed to be a small business, offering a nationwide delivery would seem unrealistic.
+
+I've tried implementing this feature. However, due to time limitations I decided to make the shop pick-up only. This is not unusual for a business selling this type of product and is within the logic of a small scale poultry breeder.
+
+The implentation of the conditional delivery logic was supposed to be achieved like this:
+
+Inside the ``update_total`` helper method in the Order model of the Checkout app, an if statement was to determine which County field a customer had selected in the checkout form (see image below). In 3 specific cases, this would add an additional delivery cost to the grand total of the order.
+The issue with this was, that the additional cost did not display to the user until the order and payment was completed and would only show up in the checkout_success page in the order summery. Thus creating an unpleasant surprise for the user.
+
+![add delivery charge logic](/media/readme/future_features/update_total_method.png)
+
+In order to handle the additional charge on the shopping basket level and before completing the order, I tried manipulating both the basket template and re-display the order summery in the checkout template with JavaScript (Thank you Jason, CodeInstitute tutor, for your dedication, patience and relentless support on this one!).
+
+For this, I added "phony" extra-fields in both shopping basket and checkout form. Those fields were set to ``dislpay: none`` and would display a hard-coded value of the delivery charge and updated grand total if the display was changed to ``block`` depending on the selected county field in checkout.
+
+![phony fields on basket and checkout](/media/readme/future_features/extra_fields.png)
+
+Additionally, 2 new variables had to be created in contexts.py in basket app: ``extra_delivery`` and ``extra_delivery_grand_total`` in order to access the new values in the templates.
+
+![new context variables](/media/readme/future_features/context_variables.png)
+
+I also tried adding a checkbox form in the shopping basket which would determine whether the customer was going to be charged delivery or not on the basket level. The JavaScript logic to handle the display of the extra template elements was included in the same file below the form (see image below).
+
+![basket delivery checkbox](/media/readme/future_features/basket_checkbox.png)
+
+The JavaScript to handle the updated display of the extra checkout elements, was included in the checkout template. The image below shows an altered "in progress"-version of the original JS function due to the attempt of ironing out some bugs that came along with it.
+
+![checkout JS](/media/readme/future_features/checkout_js.png)
+
+The reasons for not implementing the feature in the end was this. As the additional delivery charge was being handled on the back-end independantly from the front-end, information was not stored correctly when proceeding from basket to checkout and vice versa.
+Unfortunately, the time restrictions and submission deadline made me decide to not currently implement the feature. 
+This might make the business a little less competitive but does not impede on the business logic as a whole.
+
 
 ## Database Design
 
