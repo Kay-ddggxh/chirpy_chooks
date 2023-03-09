@@ -2,8 +2,8 @@ from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 
-from .models import Entry, EntryType
-from .forms import EntryForm
+from .models import Entry, EntryType, Response
+from .forms import EntryForm, ResponseForm
 
 
 def entry_list(request):
@@ -36,6 +36,8 @@ def entry_detail(request, slug):
 
     entries = Entry.objects.all()
     entry = get_object_or_404(Entry, slug=slug)
+    response = Response.objects.all()
+    response_form = ResponseForm()
     e_type = request.GET.get('entry_type')
     filtered = False
 
@@ -45,8 +47,27 @@ def entry_detail(request, slug):
             entries = entries.filter(entry_type__name=e_type)
             filtered = True
 
+    # handle response form submission
+    if request.method == 'POST':
+        response_form = ResponseForm(data=request.POST)
+        if response_form.is_valid():
+            response_form.instance.author = request.user.username
+            response = response_form.save(commit=False)
+            response.entry = entry
+            response.save()
+            messages.info(request, 'Your comment is awaiting approval.')
+            return redirect(reverse('entry_detail', args=[entry.slug]))
+        else:
+            messages.error(
+                request,
+                'Could not post your comment. Please ensure form is valid.')
+    else:
+        response_form = ResponseForm()
+
     context = {
+        'response_form': response_form,
         'entry': entry,
+        'responses': response,
     }
 
     return render(request, 'forum/entry_detail.html', context)
@@ -65,8 +86,7 @@ def create_entry(request):
         if form.is_valid():
             entry = form.save()
             messages.success(request, 'New entry was posted to forum!')
-            # return redirect(reverse('entry_detail', args=[entry.slug]))
-            return redirect(reverse('forum'))
+            return redirect(reverse('entry_detail', args=[entry.slug]))
         else:
             messages.error(
                 request,

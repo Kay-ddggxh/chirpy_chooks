@@ -317,6 +317,10 @@ button:hover {
     height: 6rem;
 }
 
+.response-form label {
+    display: none;
+}
+
 /* Footer styling */
 
 footer {

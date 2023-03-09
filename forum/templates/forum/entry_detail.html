@@ -20,13 +20,54 @@
             {% endif %}
         </div>
         <div class="col-12 col-md-8">
-            <p>{{ entry.content }}</p>
+            <p>{{ entry.content | safe }}</p>
         </div>
     </div> 
+
+    <!-- admin user forum entry edit options -->
      {% if request.user.is_superuser %}
         <small>
             <a href="{% url 'edit_entry' entry.slug %}">Edit</a> | 
             <a class="text-danger" href="{% url 'delete_entry' entry.slug %}">Delete</a>
         </small>
     {% endif %}
+    <hr>
+ 
+    <!-- Response form -->
+    <h2 class="fs-4 text-decoration-underline mt-5">Leave a response</h2>
+    {% if request.user.is_authenticated %}
+        <p>Was this artice helpful? Or did we miss something important? Let us know in the comments below.</p>
+        <form method="POST" action="" class="form mb-2 response-form" enctype="multipart/form-data">
+            {% csrf_token %}
+            {{ response_form | crispy }}
+            <div class="mt-5">
+                <a class="btn btn-white-bg" href="{% url 'forum' %}">
+                    <iconify-icon inline icon="ion:chevron-back-circle" width="16"></iconify-icon>
+                    Back to Forum
+                </a>
+                <button class="btn btn-colour-bg" type="submit">
+                    <iconify-icon inline icon="material-symbols:add-circle-rounded" width="16"></iconify-icon>
+                    Submit comment
+                </button>
+            </div>
+        </form>
+    {% else %}
+        <p>
+            To comment on this article, you will need to <a href="{% url 'account_signup' %}">create an account</a> or 
+            <a href="{% url 'account_login' %}">login</a> to your existing one.
+        </p>
+    {% endif %}
+
+    <!-- Submitted and approved comments -->
+    <h2 class="fs-4 text-decoration-underline my-5">Other people responded to this post</h2>
+    
+    {% for response in responses %}
+        <div class="forum-response border-start border-secondary ps-5">
+            <p class="p-0 m-0"><strong>{{ response }}</strong></p>
+            <small>{{ response.create_date }}</small>
+            <p>{{ response.body }}</p>
+        </div>
+    {% endfor %}
+    
+
 {% endblock %}

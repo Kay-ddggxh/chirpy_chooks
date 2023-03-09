@@ -320,6 +320,12 @@ For extensive instructions on how to manually test this site and it's user stori
 
     Create ``get_img_alt_value`` helper function in ``Entry`` model of forum app.
 
+- **forum.css not rendering**
+
+    I've created a seperate stylesheet for the forum app ``forum.css`` but the styles are not rendering on the live page when loading them in the template.
+
+    **Fix:**
+
 
 
 ## Deployment
@@ -382,6 +388,10 @@ The alert pop-up frames were rendered using [Bootstrap 5 toasts](https://getboot
 **Custom error pages**:
 
 To implement custom error pages in Django I followed this [Cryce Truly tutorial](https://www.youtube.com/watch?v=3SKjPppM_DU&ab_channel=CryceTruly)
+
+**Forum response form submission**:
+
+There were issues submitting the response form in forum/views.py initially. This was resolved referring to the following [StackOverflow article](https://stackoverflow.com/questions/60497516/django-add-comment-section-on-posts-feed)
 
 
 ### Media and Styling

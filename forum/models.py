@@ -1,4 +1,5 @@
 from django.db import models
+from django.contrib.auth.models import User
 
 from profiles.models import UserProfile
 
@@ -58,8 +59,7 @@ class Response(models.Model):
     """
     entry = models.ForeignKey(
         Entry, on_delete=models.CASCADE, related_name='response')
-    author = models.ForeignKey(
-        UserProfile, on_delete=models.CASCADE, related_name='author')
+    author = models.CharField(max_length=60)
     body = models.TextField()
     create_date = models.DateField(auto_now_add=True)
     approved = models.BooleanField(default=False)
@@ -68,4 +68,4 @@ class Response(models.Model):
         ordering = ['-create_date']
 
     def __str__(self):
-        return f"{self.user} commented on this post"
+        return f"{self.author} commented on this post"
