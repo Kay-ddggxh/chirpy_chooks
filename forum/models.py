@@ -44,6 +44,12 @@ class Entry(models.Model):
             self.slug = self.title.replace(' ', '-')
         super().save(*args, **kwargs)
 
+    def approved_responses(self):
+        """
+        helper method to return number of approved responses only
+        """
+        return self.response.filter(approved=True)
+
     def get_img_alt_value(self):
         """
         returns descriptive name for alt attribute on entry image
