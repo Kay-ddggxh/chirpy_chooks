@@ -3,7 +3,9 @@
 ## Table of Contents
 
 - [Keyword Research](#keyword-research)
+- [SEO Improvements](#seo-improvements)
 - [Marketing Strategies](#marketing-strategies)
+
 
 ## Keyword Research
 
@@ -27,6 +29,18 @@ Most keywords showed extremely low volume and competition.
 ![point of lay chickens ireland](media/readme/seo/point-of-lay-chickens-ireland.png)
 ![poultry sale clare ireland](media/readme/seo/poultry-sale-clare-ireland.png)
 ![poultry sale galway ireland](media/readme/seo/poultry-sale-galway-ireland.png)
+
+
+## SEO Improvements
+
+**Creating a Sitemap**
+
+The sitemap file sitemap.xml was created using [XML Sitemaps](https://www.xml-sitemaps.com/) to improve navigation of the site for search engines and to speed up content discovery.
+
+**Creating a robots.txt file**
+
+The file instructs search engines which directories not to crawl and index. It also links to the sitemap.
+The existence of this file signals a level of quality to search engines and so improves SEO ranking as a result.
 
 
 ## Marketing Strategies

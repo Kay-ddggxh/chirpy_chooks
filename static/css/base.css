@@ -408,6 +408,10 @@ footer {
 
 /* Error page styling */
 
+.error-img {
+    max-width: 25%;
+}
+
 .error-btn {
     width: fit-content;
 }
