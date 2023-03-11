@@ -489,7 +489,14 @@ This is necessary to create a database that can be accessed by Heroku. The datab
 
     Create ``custom_storages.py`` file.
 
+- Upload static files and media files to S3
 
+
+#### Add Stripe keys to Heroku
+
+From Stripe account, under Developers > API keys copy Public Key and Secret Key and set as config vars in Heroku app settings.
+
+Create new Webhook endpoint for deployed site and enable all events. Then add Signing Secret to Heroku app config vars.
 
 
 ## Development
