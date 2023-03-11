@@ -269,6 +269,8 @@ The first draft of the entity relationship diagram does not include all models u
 - [Gunicorn](https://docs.djangoproject.com/en/4.1/howto/deployment/wsgi/gunicorn/) (Python HTTP server for WSGI applications)
 - [pyscopg2](https://pypi.org/project/psycopg2/) (PostgreSQL Database adapter)
 - [Pillow](https://pypi.org/project/Pillow/) (Python Imaging Library)
+- [boto3](https://boto3.amazonaws.com/v1/documentation/api/latest/index.html) (integrates python libraries with AWS services)
+- [django-storages](https://django-storages.readthedocs.io/en/latest/) (collection of custom storage backends for Django)
 
 ### Django Libraries
 
@@ -410,6 +412,84 @@ This is necessary to create a database that can be accessed by Heroku. The datab
 
 - In Heroku dashboard, go to **Settings** tab
 - Add three new config vars **DATABASE_URL** (value is database URL), **SECRET_KEY** (value is secret key string) and **PORT** (value "8000")
+
+
+#### Deyploying with Heroku
+
+- In Heroku dashboard, go to **Deploy** tab
+- Select "GitHub" as Deployment method and choose correct repo
+- Enable Automatic Deploys
+- Click "Deploy Branch" button
+
+
+#### Hosting images and static file with AWS
+
+- Create AWS account and go to AWS Management Console in the My Account dropdown
+- Find and access S3 as a service and create a new bucket:
+
+    Under Object Ownership, check "ACLs enabled"
+
+    Uncheck "Block all public access" and acknowledge (required for public access to static files)
+
+- Configur bucket settings:
+
+    Under **Properties**, enable Static Website Hosting
+
+    Under **Permissions**, copy the following code into CORS section:
+
+    ```
+    [
+        {
+            "AllowedHeaders": [
+                "Authorization"
+            ],
+            "AllowedMethods": [
+                "GET"
+            ],
+            "AllowedOrigins": [
+                "*"
+            ],
+            "ExposeHeaders": []
+        }
+    ]
+    ```
+    This is required to set up the access between the Heroku app and the S3 bucket.
+
+    Under **Bucket policy**, go to Policy generator.
+
+    Bucket Type = S3 Bucket Policy
+
+    Principal = * (allows all principles)
+
+    Actions = GetObject
+
+    Paste in ARN from bucket settings tab.
+
+    Click Add Statement, then Generate Policy.
+
+    Copy policy in paste into bucket policy editor. Also add ``/*`` onto the end of the resource key.
+
+    Click Save.
+
+    Under **Access control list (ACL)**, check "List" checkbox for "Everyone (public access)"
+
+- Create user to access bucket with IAM (Identity and Access Management)
+
+    In IAM, got to User Groups (sidebar left).
+
+    There create a group for a user, create an access policy giving the group access to the S3 bucket and assign the user to the group so it can use the policy to access all files. 
+
+- Connect Django to S3
+
+    Install packages "boto3" and "django-storages" and add ``'storages'`` to INSTALLED_APPS  in settings.py
+
+    Configure settings.py accordingly, including necessary AWS variables.
+
+    Add new config vars in Heroku app settings, including user credentials from AWS.
+
+    Create ``custom_storages.py`` file.
+
+
 
 
 ## Development
