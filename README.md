@@ -227,6 +227,16 @@ Unfortunately, the time restrictions and submission deadline made me decide to n
 This might make the business a little less competitive but does not impede on the business logic as a whole.
 
 
+**Forum response approval via front-end**
+
+Currently the approval of user responses to forum entries by admin users is happening solely via the Django admin dashboard. 
+There was a valiant attempt at moving this functionality to the front-end for authorised superusers. However, 12 hours later and even with the support of 4 different CodeInstitute tutors the task could not be achieved. Due to time restrictions at this point, the feature will have to be put on hold and find itself in this section of the documentation.
+
+The image below gives an idea of what the feature would look like on the front-end interface.
+
+![Admin response approval on front-end](/media/readme/future_features/frontend-approval.png)
+
+
 ## Database Design
 
 ### Database Model

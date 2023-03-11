@@ -8,7 +8,7 @@
 {% block content %}
     <h1>Forum</h1>
     <div class="mt-5 border-bottom d-flex justify-content-between">
-        <h2 class="">{{ entry.title }}</h2>
+        <h2>{{ entry.title }}</h2>
         <a class="type-label btn btn-colour-bg" href="{% url 'forum' %}?entry_type={{ entry.entry_type }}">{{ entry.entry_type }}</a>
     </div>
     <div class="row entry-content mt-5">
@@ -25,7 +25,7 @@
     </div> 
 
     <!-- admin user forum entry edit options -->
-     {% if request.user.is_superuser %}
+    {% if request.user.is_superuser %}
         <small>
             <a href="{% url 'edit_entry' entry.slug %}">Edit</a> | 
             <a class="text-danger" href="{% url 'delete_entry' entry.slug %}">Delete</a>
