@@ -31,7 +31,7 @@ On their site, Chirpy Chooks also host a forum about all things poultry. Article
     - [Django Libraries](#django-libraries)
     - [Payment processing](#payment-processing)
     - [Emails/Newsletter](#emailsnewsletter)
-    - [SEO Tech](#seo-and-marketing)
+    - [SEO/Marketing](#seomarketing)
 
 - [Testing](#testing)
     - [Test Guide](#test-guide)
@@ -290,9 +290,10 @@ The first draft of the entity relationship diagram does not include all models u
 - [Mailchimp](https://mailchimp.com/) (Automated newsletter subscription service)
 
 
-### SEO Tech
+### SEO/Marketing
 
 - [XML Sitemaps](https://www.xml-sitemaps.com/) (Sitemap generator)
+- [Privacy Policy Generator](https://www.privacypolicygenerator.info/)
 
 ## Testing
 

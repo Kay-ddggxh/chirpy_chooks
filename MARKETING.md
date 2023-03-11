@@ -33,6 +33,10 @@ Most keywords showed extremely low volume and competition.
 
 ## SEO Improvements
 
+**Meta tags**
+
+In the head of base.html, ``<meta name="description" ...`` and ``<meta name="keywords" ...`` tags were included. 
+
 **Creating a Sitemap**
 
 The sitemap file sitemap.xml was created using [XML Sitemaps](https://www.xml-sitemaps.com/) to improve navigation of the site for search engines and to speed up content discovery.
