@@ -36,7 +36,7 @@ def entry_detail(request, slug):
 
     entries = Entry.objects.all()
     entry = get_object_or_404(Entry, slug=slug)
-    response = Response.objects.all()
+    response = Response.objects.filter(entry=entry)
     response_form = ResponseForm()
     e_type = request.GET.get('entry_type')
     filtered = False

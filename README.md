@@ -339,12 +339,15 @@ For extensive instructions on how to manually test this site and it's user stori
 
     Create ``get_img_alt_value`` helper function in ``Entry`` model of forum app.
 
-- **forum.css not rendering**
+- **Response in not specific to entry**:
 
-    I've created a seperate stylesheet for the forum app ``forum.css`` but the styles are not rendering on the live page when loading them in the template.
+    An approved user response would show underneath every forum entry, as oppose to only the one the user actually commented on.
 
-    **Fix:**
+    **Fix**: 
 
+    Change ``response = Response.objects.all()`` to ``response = Response.objects.filter(entry=entry)`` in entry_detail view in forum app (line 39).
+    
+    Reference: https://stackoverflow.com/questions/62195043/how-to-get-comment-for-the-particular-blog-post-in-django
 
 
 ## Deployment
@@ -621,6 +624,8 @@ All icons were taken from [Iconify](https://icon-sets.iconify.design/). Included
 
 ### Content/Data
 
+#### Products
+
 All fixtures for the products app were manually compiled with data gathered from various online resources.
 
 **All layer breeds**: https://www.freewaypoultry.ie/product-category/live-poultry/point-of-lay-pullets/
@@ -628,4 +633,20 @@ All fixtures for the products app were manually compiled with data gathered from
 **Broiler (Cornish Cross)**: https://thefewellhomestead.com/broiler-chicken-breeds-16-of-the-best-meat-chickens/
 
 **All duck breeds**: https://petkeen.com/best-egg-laying-duck-breeds/
+
+#### Forum
+
+Content for the few example forum entries came from the following sources.
+
+**A look at Lohman Brown**: https://www.thehappychickencoop.com/lohmann-brown-chicken/
+
+    Image: Me! (Kay Welfare)
+
+**Natural mite control**: https://www.freedomrangerhatchery.com/blog/how-to-get-rid-of-chicken-mites-and-lice-naturally/
+
+    Image: Me! (Kay Welfare)
+
+**Reviewing Pedigree Organic Layers Pellets**: https://www.pets.ie/c/organic-layers-pellets/476?gtagrefurl=https%3a%2f%2fwww.google.com%2f
+
+    Image: https://totaldiy.ie/wp-content/uploads/Pedigree-Organic-Layers-Pellets-20Kg.png
 
