@@ -115,6 +115,13 @@ button:hover {
     padding: 0;
 }
 
+.navbar-collapse {
+    width: 100vw;
+    position: absolute;
+    right: 0px;
+    z-index: 99;
+}
+
 .nav-item,
 .dropdown-item {
     padding: .3em .8em;
@@ -422,6 +429,12 @@ footer {
 /* Up to MEDIUM SIZE screens */
 
 @media (max-width: 767px) {
+
+    /* Header styling */
+    header {
+        display: flex;
+        justify-content: space-between;
+    }
 
     /* Product detail page styling */
     .detail-container {
