@@ -2,7 +2,7 @@
 {% load static %}
 
 {% block content %}
-<a  class="" href="{% url 'products' %}?category={{ product.category }}">Back to {{ product.category }}</a>
+<a href="{% url 'products' %}?category={{ product.category }}">Back to {{ product.category }}</a>
 <h1>{{ product.breed }}</h1>
 <div class="detail-container">
     <div>

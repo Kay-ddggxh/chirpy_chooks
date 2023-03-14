@@ -106,6 +106,10 @@ button:hover {
     color: #000;
 }
 
+.logo:hover {
+    color: #000;
+}
+
 .navbar-nav,
 .dropdown-item {
     background-color: var(--primary-color);
@@ -117,9 +121,6 @@ button:hover {
 
 .navbar-collapse {
     width: 100vw;
-    position: absolute;
-    right: 0px;
-    z-index: 99;
 }
 
 .nav-item,
@@ -434,6 +435,12 @@ footer {
     header {
         display: flex;
         justify-content: space-between;
+    }
+
+    /* Nav styling */
+    .navbar-collapse {
+        position: absolute;
+        right: 0;
     }
 
     /* Product detail page styling */

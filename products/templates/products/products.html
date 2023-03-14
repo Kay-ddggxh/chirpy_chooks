@@ -2,6 +2,7 @@
 {% load static %}
 
 {% block content %}
+    <a href="{% url 'categories' %}">Back to All Products</a>
     <h1>{{ current_category }}</h1>
     {% if current_category == "Layers"%}
         <p class="mt-4">Keeping your own chickens for eggs is both a fun and rewarding hobby. Even children of a young age can be included in this responsibilty and 
