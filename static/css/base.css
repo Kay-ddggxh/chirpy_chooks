@@ -265,6 +265,7 @@ button:hover {
 
 .decrement-qty,
 .increment-qty {
+    font-size: 1.4em;
     padding: 0 .5em;
     margin: 0;
 }
