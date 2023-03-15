@@ -235,6 +235,8 @@ Image does not contain entire policy document. Visit site to view full policy.
 
 ![sign up](/media/readme/features/signup.png)
 
+![confirm email](/media/readme/features/confirm-email.png)
+
 **Login**
 
 - Allows existing users to log into their account
@@ -366,6 +368,60 @@ Image does not contain entire policy document. Visit site to view full policy.
 - Approved responses listed below response form, including author, post-date and content
 
 ![forum responses](/media/readme/features/forum-response.png)
+
+
+#### Shopping Basket
+
+**Basket items in nav**
+
+- Live update of basket status in navbar
+- Counter in nav element displays only the number of different products, not the total of all products. The reason for this is, that in case of live poultry customers are quite likely to order larger numbers of each product (example: 50 Blackrock, 50 Leghorn, 30 Broilers). These figures would get too large too quickly. This is why I opted for the current option.
+
+![basket nav](/media/readme/features/basket-nav.png)
+
+**Shopping Basket**
+
+- Tabular view of currently selected products and their quantity
+- Quantity adjustment option
+- Product removal option
+- Display of subtotal, delivery cost (currently always 0) and grand total
+- Continue shopping button
+- Proceed to checkout option
+
+![basket](/media/readme/features/basket.png)
+
+
+#### Checkout
+
+**Checkout page**
+
+- Checkout form, including sections for personal info, delivery details and card details
+- Option to save details to profile for authenticated users
+- Current order summery
+- Edit Basket button
+- Pay now button
+
+![checkout page](/media/readme/features/checkout.png)
+
+**Checkout Success page**
+
+- Confirms successfull order and informs user that email was sent to the address specified
+- Displays order details, delivery and billing info
+- Continue Shopping button ("Back to products")
+
+![checkout success](/media/readme/features/checkout-success.png)
+
+
+#### Profile
+
+**User Profile page**
+
+- Delivery address form (pre-populated if user has previously saved his info)
+- Update Info button
+- Listing of past orders in order history
+
+![user profile](/media/readme/features/profile.png)
+
 
 ### Possible Future Features
 
