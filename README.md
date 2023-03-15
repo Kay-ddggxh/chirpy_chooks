@@ -180,6 +180,52 @@ For an extensive overview of the marketing research for this project, please ref
 
 ### Existing Features
 
+#### Global and Home
+
+**Navigation**
+
+- Responsive navbar with burger dropdown menu
+- Shop logo as default home link
+- Navigation options dependant of user authentication/authorisation
+
+![navbar desktop](/media/readme/features/nav.png)
+![navbar mobile](/media/readme/features/nav-mobile.png)
+
+
+**Footer**
+
+- Footer element with social media links
+- Contains link to privacy policy
+- Newsletter sign up option
+
+![footer desktop](/media/readme/features/footer.png)
+![footer mobile](/media/readme/features/footer-mobile.png)
+
+**Home page**
+
+- Home page with banner image and introduction
+- Shop Now button ("Buy Live Poultry")
+
+![home page](/media/readme/features/home.png)
+
+**About page**
+
+- General info about store operations and pick-up
+- Contact info incl. address, phone number and email
+- Shop opening hours
+
+![about page](/media/readme/features/about.png)
+
+**Privacy policy**
+
+- Standard GDPR compliant privacy policy page 
+- Linked to in footer
+
+![privacy policy](/media/readme/features/privacy.png)
+
+Image does not contain entire policy document. Visit site to view full policy.
+
+
 ### Possible Future Features
 
 **Extended product range**
