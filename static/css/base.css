@@ -29,7 +29,7 @@ body {
 
 h1 {
     font-weight: 800;
-    margin-top: 1em;
+    margin: 1.5em 0;
 }
 
 p {
@@ -117,10 +117,7 @@ button:hover {
 
 .navbar {
     padding: 0;
-}
-
-.navbar-collapse {
-    width: 100vw;
+    align-content: center;
 }
 
 .nav-item,
@@ -159,7 +156,11 @@ button:hover {
 
 .navbar-toggler {
     font-size: 2rem;
-    margin: 1em;
+    /* margin: 1em; */
+    margin: 0;
+    position: absolute;
+    right: 0px;
+    z-index: 99;
 }
 
 .toggler-icon iconify-icon {
@@ -434,13 +435,16 @@ footer {
     /* Header styling */
     header {
         display: flex;
-        justify-content: space-between;
+        justify-content: space-around;
     }
 
     /* Nav styling */
     .navbar-collapse {
         position: absolute;
+        width: 80vw;
+        top: 80px;
         right: 0;
+        z-index: 99;
     }
 
     /* Product detail page styling */
