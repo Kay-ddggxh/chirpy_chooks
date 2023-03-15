@@ -226,6 +226,28 @@ For an extensive overview of the marketing research for this project, please ref
 Image does not contain entire policy document. Visit site to view full policy.
 
 
+#### Authentication
+
+**Sign Up**
+
+- Allows new users to create account
+- Sign up process includes confirmation email with confirmation link
+
+![sign up](/media/readme/features/signup.png)
+
+**Login**
+
+- Allows existing users to log into their account
+- Includes Remember me checkbox and Forgot Password option
+
+![login](/media/readme/features/login.png)
+
+**Logout**
+
+- Allows authenticated users to securely log out of their account
+
+![logout](/media/readme/features/logout.png)
+
 #### Products
 
 **All Products page**
@@ -275,12 +297,75 @@ Image does not contain entire policy document. Visit site to view full policy.
 **Delete Product option**
 
 - Authorised admin users only!
-- Option on products page and product details page
+- Option on product details page
 - Request for user confirmation before deleting product
 - Cancel button
 - Delete button to delete existing product from database
 
 ![delete product](/media/readme/features/delete-product.png)
+
+
+#### Forum
+
+**Forum page**
+
+- Lists all forum entries in tile format
+- Tiles show title, excerpt, image, create-date and category
+- Category button filters all entries by respective category (see below)
+
+![forum page](/media/readme/features/forum.png)
+
+**Filter option**
+
+- Category tag in each entry tile acts as filter button
+- When clicked, Clear Filter button is displayed above fitler result
+
+![filter option](/media/readme/features/filter.png)
+
+**Entry detail**
+
+- Shows complete content of forum post
+- Edit and delete option for authorised users for each entry
+
+![forum entry](/media/readme/features/forum-entry.png)
+
+**Add Entry**
+
+- Authorised admin users only!
+- Complete forum entry form with image upload option
+- Cancel button
+- Add entry button to add entry to database
+
+![add entry](/media/readme/features/add-entry.png)
+
+**Edit Entry page**
+
+- Authorised admin users only!
+- Complete forum entry form with image upload option
+- Form is pre-populated with existing entry's details
+- Cancel button
+- Update entry button to update existing entry in database
+
+![edit entry](/media/readme/features/edit-entry.png)
+
+**Delete Entry option**
+
+- Authorised admin users only!
+- Option on forum entry page
+- Request for user confirmation before deleting entry
+- Cancel button
+- Delete button to delete existing entry from database
+
+![delete product](/media/readme/features/delete-entry.png)
+
+**Response form and display**
+
+- Post response: authenticated users only!
+- Response form under entry content
+- All submitted responses need admin approval (user alert after form submit about wait for approval)
+- Approved responses listed below response form, including author, post-date and content
+
+![forum responses](/media/readme/features/forum-response.png)
 
 ### Possible Future Features
 
