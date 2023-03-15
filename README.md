@@ -226,6 +226,62 @@ For an extensive overview of the marketing research for this project, please ref
 Image does not contain entire policy document. Visit site to view full policy.
 
 
+#### Products
+
+**All Products page**
+
+- Lists all categories of products
+- Links to forum and contact info
+
+![categories](/media/readme/features/categories.png)
+
+**Products page (of same category)**
+
+- Lists all products of the same category
+- Quick link to All Products page
+
+![products](/media/readme/features/products-layers.png)
+
+**Product details page**
+
+- Product image, description and price
+- Quick link to respective category
+- Quantity input
+- Continue Shopping button ("Browse more")
+- Add to basket button
+- Edit and delete option for authorised users for each product
+
+![product details](/media/readme/features/products-details.png)
+
+**Add Product page**
+
+- Authorised admin users only!
+- Complete product form with image upload option
+- Cancel button
+- Add product button to add product to database
+
+![add product](/media/readme/features/add-product.png)
+
+**Edit Product page**
+
+- Authorised admin users only!
+- Complete product form with image upload option
+- Form is pre-populated with existing product's details
+- Cancel button
+- Update product button to update existing product in database
+
+![edit product](/media/readme/features/edit-product.png)
+
+**Delete Product option**
+
+- Authorised admin users only!
+- Option on products page and product details page
+- Request for user confirmation before deleting product
+- Cancel button
+- Delete button to delete existing product from database
+
+![delete product](/media/readme/features/delete-product.png)
+
 ### Possible Future Features
 
 **Extended product range**
