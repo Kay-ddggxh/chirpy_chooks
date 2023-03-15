@@ -225,6 +225,14 @@ For an extensive overview of the marketing research for this project, please ref
 
 Image does not contain entire policy document. Visit site to view full policy.
 
+**404 Error page**
+
+- Customised 404 error page with comic chicken and witty message
+- Informs user of invalid URL
+- Back button redirects user back to home page
+
+![404 page](/media/readme/features/404.png)
+
 
 #### Authentication
 
