@@ -233,6 +233,14 @@ Image does not contain entire policy document. Visit site to view full policy.
 
 ![404 page](/media/readme/features/404.png)
 
+**User feedback**
+
+- Alert messages inform user of:
+
+    - Actions about to be performed
+    - Actions successfully completed
+    - Actions failed to complete
+
 
 #### Authentication
 
