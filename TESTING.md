@@ -72,6 +72,47 @@ No actual newsletter is set up to be sent out to subscribers. However, the infra
 | **Forum link** | Click link in contact section | User is directed to main forum page |
 
 
+#### Products 
+
+**All Products page**
+
+| Feature | Action                  | Expected Result                 |
+| :-----: | :----------------------:| :------------------------------:|
+| **Forum link** | Click link in info paragraph | User is directed to main forum page |
+| **Contact Us link** | Click contact us link in info paragraph | User is directed to Contact section on About Us page |
+| **Category link** | Click on any category tile below info paragraph | User is directed to products page of respective category |
+
+
+**Products page (of same category)**
+
+| Feature | Action                  | Expected Result                 |
+| :-----: | :----------------------:| :------------------------------:|
+| **Forum link** | Click link in info paragraph | User is directed to main forum page |
+| **Quick link (back to all products)** | Click link at the top of the page, just below navbar | User is directed back to the All Products page |
+| **Product tile link** | Click on any product tile below info paragraph | User is directed to product details page of respective product |
+
+
+**Product Details page**
+
+| Feature | Action                  | Expected Result                 |
+| :-----: | :----------------------:| :------------------------------:|
+| **Quick link (back to category)** | Click link at the top of the page, just below navbar | User is directed back to the category page of this product's category |
+| **Page content** | On products detail page | User can see product image (or placeholder in case of no image), read product specs and see price |
+| **Quantity form** | Enter different value into quantity input. | Values outside the range of 1-99 will show form validation error when adding product to basket |
+| **Quantity adjustment buttons** | Adjust quantity input value with - or + button | Value will not go below 1 or above 99. Buttons become pale when reaching top or bottom range |
+| **Browse more button** | Click button | User is directed back to all products page |
+| **Add to basket button** | Click button | Product is added to basket with specified quantity. Basket nav link updates to show current number of product types |
+
+
+**Products admin user (CRUD)**
+
+| Feature | Expect             | Action                   | Result                 |
+| :-----: | :-----------------:| :-----------------------:| :---------------------:|
+| **Adding products** | Add products form allows submission of new entry which displays on forum page | Complete add products form in Profile > Manage Products and submit form | Form validation is effective. User is redirected to detail page of newly submitted product. Success alert displays. |
+| **Editing products** | Edit option on each product detail page allows admin user to edit existing product. | Click Edit below product image. Update pre-populated form and submit. | After clicking Edit, info alert tells user that post is being edited. Form validation is effective. Form submit redirects user to product detail page with updated content. Success alert displays. |
+| **Deleting products** | Delete option on each product detail page allows admin user to delete existing product. | Click Delete at the bottom of forum entry. | User is requested to confirm deletion of product. "Yes, I'm sure" button deletes product and success alert confirms action. "No, I'm not" button cancels delete action. |
+
+
 #### Forum
 
 **Unauthenticated Users**
