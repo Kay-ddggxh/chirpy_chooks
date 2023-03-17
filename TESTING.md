@@ -28,6 +28,16 @@
 | **"Basket" Link** | Click Basket link in navbar | User is directed to shopping basket page. |
 
 
+**Authentication**
+
+| Feature | Action             | Expected Result                 |
+| :-----: | :-----------------:| :------------------------------:|
+| **Login** | As already registered user, got to login page, complete login form and click login button. | Form validation is in effect. Remember me checkbox will store user information for next login. User is directed to homepage and success message informs of successful login as "username" |
+| **Forgot Password function** | On Login page, click Forgot Password link. | User is directed to Reset Password page. Form validation is in effect. Reset link is sent to user email through which password can be reset. |
+| **Sign Up** | As unregistered user, go to Sign Up page, complete form and submit | Form validation is in effect. User is directed to Login page. Success message informs of successful account registration. |
+| **Logout** | As authenticated user, got to Logout page and click Sign out button | User is directed to homepage and success message informs user of successful sign out. |
+
+
 **Social media links (located in footer)**
 
 | Feature | Action                  | Expected Result                 |
@@ -138,6 +148,15 @@ No actual newsletter is set up to be sent out to subscribers. However, the infra
 | **Adding entry** | Forum entry form allows submission of new entry which displays on forum page | Complete forum entry form in Profile > Post in Forum and submit form | Form validation is effective.User is redirected to detail page of newly submitted entry. Success alert displays. |
 | **Editing entry** | Edit option on each entry detail page allows admin user to edit existing entry. | Click Edit at the bottom of forum entry. Update pre-populated form and submit. | After clicking Edit, info alert tells user that post is being edited. Form validation is effective. Form submit redirects user to entry detail page with updated content. Success alert displays. |
 | **Deleting entry** | Delete option on each entry detail page allows admin user to delete existing entry. | Click Delete at the bottom of forum entry. | User is requested to confirm deletion of entry. "Yes, I'm sure" button deletes entry and success alert confirms action. "No, I'm not" button cancels delete action. |
+
+
+#### Profile
+
+
+#### Basket
+
+
+#### Checkout
 
 #### User Feedback EDIT STiLL!!!!
 
