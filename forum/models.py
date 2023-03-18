@@ -16,13 +16,7 @@ class EntryType(models.Model):
 
 
 class Entry(models.Model):
-
-    class Meta:
-        """
-        Ensure correct plural of Entry
-        in admin UI
-        """
-        verbose_name_plural = 'Entries'
+    """ Creates instance of forum entry """
 
     title = models.CharField(max_length=100, unique=True)
     slug = models.SlugField(max_length=100, unique=True)
@@ -35,6 +29,7 @@ class Entry(models.Model):
 
     class Meta:
         ordering = ['-create_date']
+        verbose_name_plural = 'Entries'
 
     def __str__(self):
         return self.title

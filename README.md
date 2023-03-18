@@ -589,7 +589,26 @@ For a detailed description of all CRUD features see [Features](#features)
 
 ### Test Guide
 
-For extensive instructions on how to manually test this site and it's user stories, please refer to these [testing instructions](TESTING.md)
+For extensive instructions on how to manually test this site and it's user stories, please refer to these [Manual Testing Instructions](TESTING.md)
+
+
+### Browser Testing
+
+**Layout:** 
+
+Testing layout and appearance of site for consistency across browsers.
+
+**Functionality:** 
+
+Testing complete functionality of the site as specified in the [Manual Testing Instructions](TESTING.md) accross browsers.
+
+| Browser     | Layout      | Functionality |
+| :---------: | :----------:| :-----------: |
+| Chrome      | ✔          | ✔             |
+| Edge        | ✔          | ✔             |
+| Firefox     | ✔          | ✔             |
+| Safari      | ✔          | ✔             |
+| IE          |deprecated by Microsoft, not tested|
 
 ### Fixed bugs
 
@@ -603,23 +622,14 @@ For extensive instructions on how to manually test this site and it's user stori
 
     Also, make County field a non-required field. This was possible due to the removal of the conditional delivery charge functionality, for which the County field needed to be required (see [Future Features](#possible-future-features)).
 
-- **"Full Name" field in checkout not auto-filled**:
-
-    In the checkout view, the "Full Name" field remains blank in the payment form when the rest of the form is pre-populated with the user's saved informations.
-
-    **Fix**:
-
-- **Payment form submits without "County" field filled in**:
-
-    In the checkout view, the "County" field of the payment should be required. However, the form submits even without filling in the field.
-
-    **Fix**:
 
 - **Verbose name in "Entry" model not working**:
 
     In forum app, the model ``Entry`` has an added Meta class to set the verbose name in the admin interface to the correct plural "Entries". The name in the admin panel however shows "Entrys".
 
     **Fix**:
+
+    Oversight! I had created 2 Meta classes in the Entry model. The first specifying ``verbose_name_plural``, the second specifying ``ordering``. Due the presence of a second Meta class, the first one was being ignored. Condensing both specifications into the one Meta class fixed the problem.
 
 - **``alt`` attribute on forum post image**:
 
@@ -638,6 +648,11 @@ For extensive instructions on how to manually test this site and it's user stori
     Change ``response = Response.objects.all()`` to ``response = Response.objects.filter(entry=entry)`` in entry_detail view in forum app (line 39).
     
     Reference: https://stackoverflow.com/questions/62195043/how-to-get-comment-for-the-particular-blog-post-in-django
+
+
+### Unfixed bugs
+
+There are currently no known bugs 😀
 
 
 ## Deployment
