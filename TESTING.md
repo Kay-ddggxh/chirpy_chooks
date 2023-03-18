@@ -173,6 +173,22 @@ No actual newsletter is set up to be sent out to subscribers. However, the infra
 
 #### Checkout
 
+| Feature | Action                  | Expected Result                 |
+| :-----: | :----------------------:| :------------------------------:|
+| **Checkout page** | On Basket page, click "Go to Checkout" button. | User sees complete payment form with sections for Personal Info, Contact/Delivery Info and Payment details. Display of order summery.  |
+| **Save Info to Profile** | As authenticated user, tick "Save delivery into to profile checkbox and complete and submit form. Then go to My Profile page. | Form on Profile page is pre-populated with information specified during checkout process. |
+| **Unregistered users** | As unauthenticated user, go to Checkout page. | Below Contact info section, "Create account" link and "login" link show, directing back to Sign Up/Login page. |
+| **Edit Basket button** | Click Edit Basket button below form. | User is directed back to Basket page where they can edit order contents. |
+| **Payment** | Fill out form and click Pay Now button. | Form validation is in effect. Loading spinner displays while payment is being processed. User is directed to Checkout Success page. Success message informs user of successful order placement with order number and email address. |
+| **Checkout Success page** | Complete an order and get directed to Checkout Success page. | User can view complete summery of placed order, inlcuding order number, order contents, personal info and date of order. Back to Products button links back to All products page. |
+
+**Checking for successful payment**
+
+To verify that a payment was successful, I went to the Stripe website to confirm that both the event and webhook creation showed no errors.
+
+![stripe event]()
+![stripe webhook]()
+
 #### User Feedback EDIT STiLL!!!!
 
 Alert messages are displaying for the following user actions:
