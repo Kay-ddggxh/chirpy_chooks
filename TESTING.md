@@ -150,11 +150,26 @@ No actual newsletter is set up to be sent out to subscribers. However, the infra
 | **Deleting entry** | Delete option on each entry detail page allows admin user to delete existing entry. | Click Delete at the bottom of forum entry. | User is requested to confirm deletion of entry. "Yes, I'm sure" button deletes entry and success alert confirms action. "No, I'm not" button cancels delete action. |
 
 
-#### Profile
+#### Profile (authenticated users)
 
+| Feature | Action                  | Expected Result                 |
+| :-----: | :----------------------:| :------------------------------:|
+| **Profile page** | Go to My Profile via Manage Profile link in navbar | User sees update form for default contact info and tabular view of complete order history |
+| **Contact Info form** | Fill out form and submit info/new changes. Add items to basket and proceed to checkout | Form validation is in effect. On Checkout page, contact info section of payment form is pre-populated with saved info from user profile. |
+| **Review past order** | In order history, click order number link of any past order. | User is directed to new page displaying complete details of selected order. Alert message informs that info shown is of past order. Back to profile button links back to Profile page. |
 
 #### Basket
 
+| Feature | Action                  | Expected Result                 |
+| :-----: | :----------------------:| :------------------------------:|
+| **Empty Basket** | Without adding items to basket, go to Basket page via navbar | Basket page displays "Basket is empty" message and Back to Products button, linking to All Products page |
+| **Basket page** | Add item(s) to basket and go to Basket page via navbar | User sees tabular view of all items in basket, incl. subtotals for all items, delivery cost (currently default of 0) and grand total |
+| **Basket page** | Add item(s) to basket and go to Basket page via navbar | User sees tabular view of all items in basket, incl. subtotals for all items, delivery cost (currently default of 0) and grand total |
+| **Quantity adjustment buttons** | Adjust quantity input value with - or + button | Value will not go below 1 or above 99. Buttons become pale when reaching top or bottom range |
+| **Update item** | Change quantity of selected item and click Update | Success message informs user that quantity for "product name" was updated to new value. Basket now displays new value, subtotal and grand total. |
+| **Remove item** | Click Remove on any item in basket. | Success message informs user that "product name" was removed from basket. Basket now displays new grand total. |
+| **Keep Shopping button** | Click Keep Shopping button on basket page. | User is directed to All Products page while basket information and contents are stored. |
+| **Checkout button** | Click Go to Checkout button on basket page. | User is directed to Checkout page. |
 
 #### Checkout
 
