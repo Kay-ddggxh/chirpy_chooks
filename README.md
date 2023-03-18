@@ -5,6 +5,10 @@ This a Django based (fictional!) e-commerce application which is the last of 5 r
 Chirpy Chooks is the online store of a small business based in the West of Ireland, specialising in live poultry. The store offers a variety of laying hens, broiler chickens and laying ducks. It also offers delivery options within a certain radius (for the sake of simplicity this is based on counties rather than actual distances) and otherwise in-store collections.
 On their site, Chirpy Chooks also host a forum about all things poultry. Articles published by the business itself are posted on a regular basis, offering helpful advice about poultry keeping, interesting facts about different breeds or the latest recommendations on feeds, bedding, pest control, etc.
 
+![responsive mockup](/media/readme/mockup.png)
+
+[Link to live site](https://chirpy-chooks.herokuapp.com/) 
+
 ## Table of Contents
 
 - [UI/UX](#uiux)
@@ -506,11 +510,38 @@ The first draft of the entity relationship diagram does not include all models u
 
 ![ERD](media/readme/erd.png)
 
+
 ### Custom Model
 
+As required by the assessment criteria for this project, three custom models were added which were not covered by the Code Institute tutorial this project is based on. These models are ``EntryType``, ``Entry`` and ``Response``, all of the forum app (forum/models.py).
+
+I have also customised models covered the Boutique Ado walkthrough project (see [References](#referencesdocumentationtutorials)) by adding or removing fields and implementing new helper methods. These models are ``Order`` of checkout app (checkout/models.py), ``Category`` and ``Product`` of products app (products/models.py) and ``UserProfile`` of profiles app (profiles/models.py).
 
 ### CRUD
 
+Full CRUD functionality via the front-end UI is implemented for admin users in the Forum app and the Products app. 
+
+**Create:**
+
+*Forum:* Create new forum entry. 
+*Products:* Add new product. 
+
+**Read:**
+
+*Forum:* Read all existing forum entries. 
+*Products:* View all existing products. 
+
+**Update:**
+
+*Forum:* Edit existing forum entries. 
+*Products:* Edit existing products. 
+
+**Delete:**
+
+*Forum:* Delete existing forum entries. 
+*Products:* Delete existing products. 
+
+For a detailed description of all CRUD features see [Features](#features)
 
 ## Technologies Used
 

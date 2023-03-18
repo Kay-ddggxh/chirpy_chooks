@@ -4,7 +4,14 @@
 
 - [Manual Testing](#manual-testing-guide)
     - [Global](#global)
+    - [Home](#home)
+    - [About](#about)
+    - [Products](#products)
     - [Forum](#forum)
+    - [Profile](#profile-authenticated-users)
+    - [Basket](#basket)
+    - [Checkout](#checkout)
+    - [User Feedback](#user-feedback)
 
 
 ## Manual Testing Guide
@@ -70,7 +77,7 @@ No actual newsletter is set up to be sent out to subscribers. However, the infra
 | **Custom 404 page** | Append faulty extension to home URL (or simply /404) | Users is directed to customised 404 error page, informing them of invalid URL with a Back to Homepage button |
 
 
-#### Home 
+### Home 
 
 **Shop Now button**
 
@@ -79,7 +86,7 @@ No actual newsletter is set up to be sent out to subscribers. However, the infra
 | **Buy Live Poultry button** | Click button located on homepage | Users is directed to all products page, listing all available categories |
 
 
-#### About
+### About
 
 | Feature | Action                  | Expected Result                 |
 | :-----: | :----------------------:| :------------------------------:|
@@ -87,7 +94,7 @@ No actual newsletter is set up to be sent out to subscribers. However, the infra
 | **Forum link** | Click link in contact section | User is directed to main forum page |
 
 
-#### Products 
+### Products 
 
 **All Products page**
 
@@ -128,7 +135,7 @@ No actual newsletter is set up to be sent out to subscribers. However, the infra
 | **Deleting products** | Delete option on each product detail page allows admin user to delete existing product. | Click Delete at the bottom of forum entry. | User is requested to confirm deletion of product. "Yes, I'm sure" button deletes product and success alert confirms action. "No, I'm not" button cancels delete action. |
 
 
-#### Forum
+### Forum
 
 **Unauthenticated Users**
 
@@ -155,7 +162,7 @@ No actual newsletter is set up to be sent out to subscribers. However, the infra
 | **Deleting entry** | Delete option on each entry detail page allows admin user to delete existing entry. | Click Delete at the bottom of forum entry. | User is requested to confirm deletion of entry. "Yes, I'm sure" button deletes entry and success alert confirms action. "No, I'm not" button cancels delete action. |
 
 
-#### Profile (authenticated users)
+### Profile (authenticated users)
 
 | Feature | Action                  | Expected Result                 |
 | :-----: | :----------------------:| :------------------------------:|
@@ -163,7 +170,7 @@ No actual newsletter is set up to be sent out to subscribers. However, the infra
 | **Contact Info form** | Fill out form and submit info/new changes. Add items to basket and proceed to checkout | Form validation is in effect. On Checkout page, contact info section of payment form is pre-populated with saved info from user profile. |
 | **Review past order** | In order history, click order number link of any past order. | User is directed to new page displaying complete details of selected order. Alert message informs that info shown is of past order. Back to profile button links back to Profile page. |
 
-#### Basket
+### Basket
 
 | Feature | Action                  | Expected Result                 |
 | :-----: | :----------------------:| :------------------------------:|
@@ -176,7 +183,7 @@ No actual newsletter is set up to be sent out to subscribers. However, the infra
 | **Keep Shopping button** | Click Keep Shopping button on basket page. | User is directed to All Products page while basket information and contents are stored. |
 | **Checkout button** | Click Go to Checkout button on basket page. | User is directed to Checkout page. |
 
-#### Checkout
+### Checkout
 
 | Feature | Action                  | Expected Result                 |
 | :-----: | :----------------------:| :------------------------------:|
@@ -194,7 +201,7 @@ To verify that a payment was successful, I went to the Stripe website to confirm
 ![stripe event](/media/readme/stripe-event.png)
 ![stripe webhook](/media/readme/stripe-webhook.png)
 
-#### User Feedback
+### User Feedback
 
 Small pop-up messages of the types *"Alert", "Success", "Warning" and "Error"* will display for the following user actions:
 
