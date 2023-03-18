@@ -34,9 +34,14 @@
 | :-----: | :-----------------:| :------------------------------:|
 | **Login** | As already registered user, got to login page, complete login form and click login button. | Form validation is in effect. Remember me checkbox will store user information for next login. User is directed to homepage and success message informs of successful login as "username" |
 | **Forgot Password function** | On Login page, click Forgot Password link. | User is directed to Reset Password page. Form validation is in effect. Reset link is sent to user email through which password can be reset. |
-| **Sign Up** | As unregistered user, go to Sign Up page, complete form and submit | Form validation is in effect. User is directed to Login page. Success message informs of successful account registration. |
+| **Sign Up** | As unregistered user, go to Sign Up page, complete form and submit | Form validation is in effect. User will receive confirmation email with link to verify registration (see below). After clicking link, user is directed to Login page. Success message informs of successful account registration. |
 | **Logout** | As authenticated user, got to Logout page and click Sign out button | User is directed to homepage and success message informs user of successful sign out. |
 
+**Real emails**
+
+| Feature | Action             | Expected Result                 |
+| :-----: | :-----------------:| :------------------------------:|
+| **Account registration** | Recommended to test with temporary email address (example: [TempMail.org](https://temp-mail.org/en/)). Go through Sign up process via Sign Up page | New page and alert message informs user that email has been sent. User receives confirmation email with confirmation link. When clicked, link directs user success page with link to login page. |
 
 **Social media links (located in footer)**
 
@@ -186,28 +191,59 @@ No actual newsletter is set up to be sent out to subscribers. However, the infra
 
 To verify that a payment was successful, I went to the Stripe website to confirm that both the event and webhook creation showed no errors.
 
-![stripe event]()
-![stripe webhook]()
+![stripe event](/media/readme/stripe-event.png)
+![stripe webhook](/media/readme/stripe-webhook.png)
 
-#### User Feedback EDIT STiLL!!!!
+#### User Feedback
 
-Alert messages are displaying for the following user actions:
+Small pop-up messages of the types *"Alert", "Success", "Warning" and "Error"* will display for the following user actions:
 
-**Sign Up**:
+**Products**
 
-| Feature | Action                   | Result                 |
-| :-----: | :-----------------------:| :---------------------:|
-| **Sign Up** | Click Sign Up button on Logout page | Alert messages informs user of successful sign out |
-| **Sign In** | Click Sign out button on Logout page | Alert messages informs user of successful sign out |
-| **Logout** | Click Sign out button on Logout page | Alert messages informs user of successful sign out |
-| **Posting forum response** | Submit a response on a forum post | Alert message informs user that reponse is awaiting approval |
+- Unauthorised user trying to add new product
+- Add new product (authorised users only)
+- Submit invalid product form
+- Unauthorised user trying to edit existing product
+- Edit existing product (unauthorised users only)
+- Submit invalid form when editing product (authorised users only)
+- Accessing product edit page and form (authorised users only)
+- Unauthorised user trying to delete existing product
+- Delete existing product (authorised users only)
 
+**Forum**
 
-#### Real emails (needs editing) EDIT STiLL!!!!
+- Response submit (response awaiting approval)
+- Submit invalid response form
+- Unauthorised user trying to create forum entry
+- Post forum entry (authorised users only)
+- Submit invalid forum entry form
+- Unauthorised user trying to edit existing forum entry
+- Edit existing forum entry (authorised users only)
+- Submit invalid form when editing forum entry
+- Accessing entry edit page and form (authorised users only)
+- Unauthorised user trying to delete existing forum entry
+- Delete existing forum entry (authorised users only)
 
-- register for account with temporary email (example: [TempMail.org](https://temp-mail.org/en/))
-- receive confirmation on fake email address and click on confirmation link
-- site will reload and redirect to sign in page
+**Profile**
 
+- Update profile
+- Submit invalid form when updating profile
+- Review past orders via profile page
+
+**Basket**
+
+- Update item quantity in shopping basket
+- Add product to basket
+- Remove item from basket
+- Unable to remove item from basket
+
+**Checkout**
+
+- 400 error in payment processing
+- Product in basket not found in database
+- Submit invalid checkout form
+- Accessing checkout with empty basket
+- No Stripe public key present (payment process)
+- Successful order completion
 
 
