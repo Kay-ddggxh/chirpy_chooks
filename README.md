@@ -621,13 +621,12 @@ As this is a Django project, the HTML couldn't be tested via the site's URL, due
 - 2. (Error): Move ``h3`` outside ``address`` element
 - 3. (Warning): Remove ``aria-label`` attribute from ``div`` element and add it ``h3`` instead
 
-****
+**Privacy**
 
 *Result:*
 
-![](/media/readme/validation/html-base.png)
+![privacy](/media/readme/validation/html-noerrors.png)
 
-*Fix:*
 
 ****
 
