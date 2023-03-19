@@ -592,6 +592,150 @@ For a detailed description of all CRUD features see [Features](#features)
 For extensive instructions on how to manually test this site and it's user stories, please refer to these [Manual Testing Instructions](TESTING.md)
 
 
+### Validator Testing
+
+#### HTML [W3C validator](https://validator.w3.org/)
+
+As this is a Django project, the HTML couldn't be tested via the site's URL, due to Django tags and Jinja templating language in HTML files. Instead, the source code of each page was pasted into the validator directly.
+
+**Base/Home**
+
+*Result:*
+
+![base result](/media/readme/validation/html-base.png)
+
+*Fix:*
+
+- 1. (Error): Remove ``p`` element from inside ``button`` element
+- 2. - 5.(Warnings): Remove ``type`` attributes from ``script`` elements
+
+****
+
+*Result:*
+
+![](/media/readme/validation/html-base.png)
+
+*Fix:*
+
+****
+
+*Result:*
+
+![](/media/readme/validation/html-base.png)
+
+*Fix:*
+
+****
+
+*Result:*
+
+![](/media/readme/validation/html-base.png)
+
+*Fix:*
+
+****
+
+*Result:*
+
+![](/media/readme/validation/html-base.png)
+
+*Fix:*
+
+****
+
+*Result:*
+
+![](/media/readme/validation/html-base.png)
+
+*Fix:*
+
+****
+
+*Result:*
+
+![](/media/readme/validation/html-base.png)
+
+*Fix:*
+
+****
+
+*Result:*
+
+![](/media/readme/validation/html-base.png)
+
+*Fix:*
+
+****
+
+*Result:*
+
+![](/media/readme/validation/html-base.png)
+
+*Fix:*
+
+****
+
+*Result:*
+
+![](/media/readme/validation/html-base.png)
+
+*Fix:*
+
+****
+
+*Result:*
+
+![](/media/readme/validation/html-base.png)
+
+*Fix:*
+
+****
+
+*Result:*
+
+![](/media/readme/validation/html-base.png)
+
+*Fix:*
+
+****
+
+*Result:*
+
+![](/media/readme/validation/html-base.png)
+
+*Fix:*
+
+****
+
+*Result:*
+
+![](/media/readme/validation/html-base.png)
+
+*Fix:*
+
+
+
+#### CSS [Jigsaw](https://jigsaw.w3.org/css-validator/)
+
+
+
+#### JavaScript [JSHint](https://jshint.com/) 
+
+
+#### Performance, Accessibility, SEO, Best Practices (Lighthouse Chrome DevTools)
+
+**Desktop results**
+
+![lighthouse results desktop](/media/readme/lighthouse-desktop.png)
+
+The yellow scores in Performance and Best Practices are due to referencing external libraries and technologies such as Bootstrap, JQuery and Stripe that the project depend on and cannot be removed.
+
+**Mobile results**
+
+![lighthouse results mobile](/media/readme/light-mobile.png)
+
+The yellow score in Performance is due to referencing external libraries and technologies such as Bootstrap, JQuery and Stripe that the project depend on and cannot be removed.
+
 ### Browser Testing
 
 **Layout:** 

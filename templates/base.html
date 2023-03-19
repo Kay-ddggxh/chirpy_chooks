@@ -174,7 +174,7 @@
 		<div class="newsletter-toggle-container">
 			<button class="newsletter-toggle" id="newsletter-toggle-btn">
 				<iconify-icon inline icon="game-icons:letter-bomb" style="color: black;" width="24"></iconify-icon>
-				<p class="d-inline">Get our Newsletter</p>
+				Get our Newsletter
 			</button>
 		</div>
 		<!-- Begin Mailchimp Signup Form -->
@@ -214,14 +214,14 @@
 
 	{% block postloadjs %}
 		
-		<script type="text/javascript">
+		<script>
 		 	// Bootstrap boilerplate JS for toast handling
 			let toast = bootstrap.Toast.getOrCreateInstance(document.querySelector('.toast'));
 			toast.show(); 
         </script>
     
 		<!-- Newsletter toggle JS -->
-		<script type="text/javascript">
+		<script>
 			let newsToggleBtn = document.getElementById("newsletter-toggle-btn");
 			let newsSignupForm = document.getElementById("mc_embed_signup");
 			newsToggleBtn.addEventListener("click", toggleNewsletterForm);
@@ -237,8 +237,8 @@
 		</script>
 
 		<!-- Mailchimp JS -->
-		<script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script>
-		<script type='text/javascript'>
+		<script src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script>
+		<script>
 			(function($) {
 				window.fnames = new Array(); 
 				window.ftypes = new Array();
