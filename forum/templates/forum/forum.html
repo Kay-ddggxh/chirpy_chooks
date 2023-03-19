@@ -16,9 +16,9 @@
     {% endif %}
     {% for entry in entries %}
         <div class="forum-entry-card">
+            <a class="type-label btn btn-colour-bg" href="{% url 'forum' %}?entry_type={{ entry.entry_type }}">{{ entry.entry_type.get_friendly_name }}</a>
             <a href="{% url 'entry_detail' entry.slug %}" class="forum-entry-link">
                 <h3 class="entry-heading"><strong>{{ entry.title }}</strong></h3>   
-                <a class="type-label btn btn-colour-bg" href="{% url 'forum' %}?entry_type={{ entry.entry_type }}">{{ entry.entry_type }}</a>
                 <hr>
                 <div class="row">
                     <div class="col-12 col-sm-8">

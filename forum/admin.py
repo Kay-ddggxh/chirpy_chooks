@@ -4,7 +4,11 @@ from .models import Entry, EntryType, Response
 
 @admin.register(EntryType)
 class EntryTypeAdmin(admin.ModelAdmin):
-    pass
+    list_display = (
+        'name',
+        'friendly_name',
+    )
+    prepopulated_fields = {'name': ('friendly_name',)}
 
 
 @admin.register(Entry)

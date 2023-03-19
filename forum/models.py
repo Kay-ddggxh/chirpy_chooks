@@ -10,9 +10,18 @@ class EntryType(models.Model):
     """
 
     name = models.CharField(max_length=80)
+    friendly_name = models.CharField(max_length=254, null=True, blank=True)
 
     def __str__(self):
         return self.name
+
+    def get_friendly_name(self):
+        return self.friendly_name
+
+    def save(self, *args, **kwargs):
+        if not self.name:
+            self.name = self.friendly_name.replace(' ', '-')
+        super().save(*args, **kwargs)
 
 
 class Entry(models.Model):

@@ -598,7 +598,7 @@ For extensive instructions on how to manually test this site and it's user stori
 
 As this is a Django project, the HTML couldn't be tested via the site's URL, due to Django tags and Jinja templating language in HTML files. Instead, the source code of each page was pasted into the validator directly.
 
-**Base/Home**
+**Base/Home page**
 
 *Result:*
 
@@ -609,7 +609,7 @@ As this is a Django project, the HTML couldn't be tested via the site's URL, due
 - 1. (Error): Remove ``p`` element from inside ``button`` element
 - 2.-5.(Warnings): Remove ``type`` attributes from ``script`` elements
 
-**About**
+**About page**
 
 *Result:*
 
@@ -621,44 +621,50 @@ As this is a Django project, the HTML couldn't be tested via the site's URL, due
 - 2. (Error): Move ``h3`` outside ``address`` element
 - 3. (Warning): Remove ``aria-label`` attribute from ``div`` element and add it ``h3`` instead
 
-**Privacy**
+**Privacy page**
 
 *Result:*
 
-![privacy](/media/readme/validation/html-noerrors.png)
+![privacy result](/media/readme/validation/html-noerrors.png)
 
 
-****
+**All Products page**
 
 *Result:*
 
-![](/media/readme/validation/html-base.png)
+![all products result](/media/readme/validation/html-noerrors.png)
+
+
+**Products page**
+
+*Result:*
+
+![products result](/media/readme/validation/html-products.png)
 
 *Fix:*
 
-****
+- 1. (Warning): Remove ``type`` attributes from ``script`` element
+
+**Product details page**
 
 *Result:*
 
-![](/media/readme/validation/html-base.png)
+![products details result](/media/readme/validation/html-noerrors.png)
 
-*Fix:*
 
-****
-
-*Result:*
-
-![](/media/readme/validation/html-base.png)
-
-*Fix:*
-
-****
+**Forum page**
 
 *Result:*
 
-![](/media/readme/validation/html-base.png)
+![forum results](/media/readme/validation/html-forum.png)
 
 *Fix:*
+
+- 1., 3., 4., 6., 7., 9. (Errors): Move ``a`` element with filter functionality outside ``a`` element linking to entry detail
+
+- 2., 5,. 8. (Errors): Add "friendly_name" field to EntryType model in forum app. Include helper method ``get_friendly_name`` and ``save`` method to auto-generate name from friendly name. Adjust link in forum template and entry_details template accordingly.
+
+Also added method in EntryForm to render friendly name as select option (source: [Boutique Ado walkthrough](https://github.com/Kathrin-ddggxh/CI_boutique-ado/blob/main/products/forms.py#:~:text=def%20__init__(,choices%20%3D%20friendly_names)))
 
 ****
 
