@@ -598,6 +598,12 @@ For extensive instructions on how to manually test this site and it's user stori
 
 As this is a Django project, the HTML couldn't be tested via the site's URL, due to Django tags and Jinja templating language in HTML files. Instead, the source code of each page was pasted into the validator directly.
 
+**Error page**
+
+*Result:*
+
+![error result](/media/readme/validation/html-noerrors.png)
+
 **Base/Home page**
 
 *Result:*
@@ -760,9 +766,62 @@ Research within the CodeInstitute community has shown that is a common occurance
 
 #### CSS [Jigsaw](https://jigsaw.w3.org/css-validator/)
 
+No errors found.
+
+![jigsaw results](/media/readme/validation/css-results.png)
 
 
 #### JavaScript [JSHint](https://jshint.com/) 
+
+**Basket app**
+
+*quantity_input_script.html*: 
+
+No errors or warnings
+
+*basket.html (line 88-104)*: 
+
+2 warnings: Missing semicolons
+
+Fix: Add semicolons
+
+**Checkout app**
+
+*stripe_elements.js*: 
+
+1 warning: Missing semicolon
+
+Fix: Add semicolon
+
+1 undefined variable ``Stripe``, line 11
+
+Fix: No fix required, variable is inherent in Stripe functionality 
+
+**Forum app**
+
+*entry_detail.html*:
+
+2 warnings: Missing semicolons
+
+Fix: Add semicolons
+
+**Products app**
+
+*quantity_input_script.html*:
+
+No errors or warnings
+
+*product_details.html*:
+
+No errors or warnings
+
+**Global**
+
+*base.html*:
+
+![base js result](/media/readme/validation/js-base.png)
+
+All error and warnings in the above result refer to the default script that comes with the MailChimp newsletter functionality. Therefore no fix is required. 
 
 
 #### Performance, Accessibility, SEO, Best Practices (Lighthouse Chrome DevTools)

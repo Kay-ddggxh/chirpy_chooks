@@ -41,31 +41,3 @@
        </div>
     </div>
 {% endblock %}
-
-{% block postloadjs %}
-{{ block.super }}
-
-<script>
-// handles user confirmation for deleting products
-
-    let deleteConfirmLink = document.getElementById("delete-confirm-link-p");
-    let cancelDeleteLink = document.getElementById("cancel-delete-link-p");
-    let deleteConfirmationEl = document.getElementById("delete-confirmation-p");
-
-    deleteConfirmLink.addEventListener("click", handleDelete);
-    cancelDeleteLink.addEventListener("click", cancelDeleteAction);
-
-    function handleDelete(event) {
-        event.preventDefault();
-        deleteConfirmationEl.classList.remove("d-none");
-        deleteConfirmationEl.classList.add("d-block");
-    }
-
-    function cancelDeleteAction(event) {
-        event.preventDefault();
-        deleteConfirmationEl.classList.add("d-none")
-        deleteConfirmationEl.classList.remove("d-block")  
-    }
-</script>
-
-{% endblock %}
