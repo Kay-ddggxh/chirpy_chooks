@@ -81,6 +81,9 @@ SUMMERNOTE_THEME = 'bs5'
 
 SUMMERNOTE_CONFIG = {
     # Summernote customisation
+
+    'iframe': False,
+
     'summernote': {
         # Change editor size
         'width': '100%',

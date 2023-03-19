@@ -652,6 +652,22 @@ As this is a Django project, the HTML couldn't be tested via the site's URL, due
 ![products details result](/media/readme/validation/html-noerrors.png)
 
 
+**Add product page**
+
+*Result:*
+
+![](/media/readme/validation/html-noerrors.png)
+
+
+**Edit product page**
+
+*Result:*
+
+![](/media/readme/validation/html-noerrors.png)
+
+*Fix:*
+
+
 **Forum page**
 
 *Result:*
@@ -666,11 +682,45 @@ As this is a Django project, the HTML couldn't be tested via the site's URL, due
 
 Also added method in EntryForm to render friendly name as select option (source: [Boutique Ado walkthrough](https://github.com/Kathrin-ddggxh/CI_boutique-ado/blob/main/products/forms.py#:~:text=def%20__init__(,choices%20%3D%20friendly_names)))
 
-****
+**Forum entry details page**
 
 *Result:*
 
-![](/media/readme/validation/html-base.png)
+![entry details result](/media/readme/validation/html-entry-detail.png)
+
+*Fix:*
+
+- 1. (Error): Remove ``p`` tags from around rendered entry content
+
+- 2. (Error): Add placeholder value (#) to action attribute 
+
+**Add forum entry page**
+
+*Result:*
+
+![add entry result](/media/readme/validation/html-add-entry.png)
+
+*Fix:*
+
+No fix required. All errors listed by W3Validator are related to Summernote and not any code written by myself.
+Research within the CodeInstitute community has shown that is a common occurance and should be noted but is not necessary to action over.
+
+**Edit forum entry page**
+
+*Result:*
+
+![edit entry result](/media/readme/validation/html-add-entry.png)
+
+*Fix:*
+
+No fix required. All errors listed by W3Validator are related to Summernote and not any code written by myself.
+Research within the CodeInstitute community has shown that is a common occurance and should be noted but is not necessary to action over.
+
+**Profile page**
+
+*Result:*
+
+![](/media/readme/validation/html-.png)
 
 *Fix:*
 
@@ -678,7 +728,7 @@ Also added method in EntryForm to render friendly name as select option (source:
 
 *Result:*
 
-![](/media/readme/validation/html-base.png)
+![](/media/readme/validation/html-.png)
 
 *Fix:*
 
@@ -686,7 +736,7 @@ Also added method in EntryForm to render friendly name as select option (source:
 
 *Result:*
 
-![](/media/readme/validation/html-base.png)
+![](/media/readme/validation/html-.png)
 
 *Fix:*
 
@@ -694,31 +744,7 @@ Also added method in EntryForm to render friendly name as select option (source:
 
 *Result:*
 
-![](/media/readme/validation/html-base.png)
-
-*Fix:*
-
-****
-
-*Result:*
-
-![](/media/readme/validation/html-base.png)
-
-*Fix:*
-
-****
-
-*Result:*
-
-![](/media/readme/validation/html-base.png)
-
-*Fix:*
-
-****
-
-*Result:*
-
-![](/media/readme/validation/html-base.png)
+![](/media/readme/validation/html-.png)
 
 *Fix:*
 

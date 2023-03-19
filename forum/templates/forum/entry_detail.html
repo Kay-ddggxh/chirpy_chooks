@@ -16,7 +16,7 @@
             {% endif %}
         </div>
         <div class="col-12 col-md-8">
-            <p>{{ entry.content | safe }}</p>
+            {{ entry.content | safe }}
         </div>
     </div> 
 
@@ -38,7 +38,7 @@
     <h2 class="fs-4 text-decoration-underline mt-5">Leave a response</h2>
     {% if request.user.is_authenticated %}
         <p>Was this artice helpful? Or did we miss something important? Let us know in the comments below.</p>
-        <form method="POST" action="" class="form mb-2 response-form" enctype="multipart/form-data">
+        <form method="POST" action="#" class="form mb-2 response-form" enctype="multipart/form-data">
             {% csrf_token %}
             {{ response_form | crispy }}
             <div class="mt-5">
