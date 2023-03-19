@@ -4,7 +4,6 @@ from django.db.models.signals import post_save
 from django.dispatch import receiver
 
 
-PLACEHOLDER = 'County *'
 CARLOW = 'Carlow'
 CAVAN = 'Cavan'
 CLARE = 'Clare'
@@ -34,7 +33,6 @@ WICKLOW = 'Wicklow'
 
 
 COUNTIES = [
-    (PLACEHOLDER, 'County *'),
     (CARLOW, 'Carlow'),
     (CAVAN, 'Cavan'),
     (CLARE, 'Clare'),

@@ -7,7 +7,7 @@ class UserProfileForm(forms.ModelForm):
         model = UserProfile
         exclude = ('user',)
         widgets = {
-            'county': forms.Select(attrs={'class': 'form-control'}),
+            'county': forms.Select(attrs={'class': 'form-select'}),
         }
 
     def __init__(self, *args, **kwargs):
@@ -21,15 +21,11 @@ class UserProfileForm(forms.ModelForm):
             'default_street_address1': 'Street Address 1',
             'default_street_address2': 'Street Address 2',
             'default_town_or_city': 'Town or City',
-            'default_county': 'County *',
+            'default_county': 'County',
             'default_postcode': 'Postal Code',
         }
 
         self.fields['default_phone_number'].widget.attrs['autofocus'] = True
         for field in self.fields:
-            if self.fields[field].required:
-                placeholder = f'{placeholders[field]} *'
-            else:
-                placeholder = placeholders[field]
-            self.fields[field].widget.attrs['placeholder'] = placeholder
-            self.fields[field].label = False
+            placeholder = placeholders[field]
+            self.fields[field].label = placeholder

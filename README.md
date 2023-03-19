@@ -720,34 +720,42 @@ Research within the CodeInstitute community has shown that is a common occurance
 
 *Result:*
 
-![](/media/readme/validation/html-.png)
+![profile result](/media/readme/validation/html-profile.png)
 
 *Fix:*
 
-****
+- Remove "PLACEHOLDER" value from COUNTIES list in profile/models.py. Adjust UserProfileForm rendering to display default labels
+
+**Shopping Basket page**
 
 *Result:*
 
-![](/media/readme/validation/html-.png)
+![basket result](/media/readme/validation/html-noerrors.png)
 
-*Fix:*
 
-****
-
-*Result:*
-
-![](/media/readme/validation/html-.png)
-
-*Fix:*
-
-****
+**Checkout page**
 
 *Result:*
 
-![](/media/readme/validation/html-.png)
+![checkout result](/media/readme/validation/html-checkout.png)
 
 *Fix:*
 
+- Change ``h1`` element to ``div`` element
+
+
+**Checkout Success page**
+
+*Result:*
+
+![checkout success result](/media/readme/validation/html-noerrors.png)
+
+
+**Order History page**
+
+*Result:*
+
+![order history result](/media/readme/validation/html-noerrors.png)
 
 
 #### CSS [Jigsaw](https://jigsaw.w3.org/css-validator/)
