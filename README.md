@@ -607,15 +607,19 @@ As this is a Django project, the HTML couldn't be tested via the site's URL, due
 *Fix:*
 
 - 1. (Error): Remove ``p`` element from inside ``button`` element
-- 2. - 5.(Warnings): Remove ``type`` attributes from ``script`` elements
+- 2.-5.(Warnings): Remove ``type`` attributes from ``script`` elements
 
-****
+**About**
 
 *Result:*
 
-![](/media/readme/validation/html-base.png)
+![about result](/media/readme/validation/html-about.png)
 
 *Fix:*
+
+- 1. (Warning): Add ``h2`` to first ``section`` element
+- 2. (Error): Move ``h3`` outside ``address`` element
+- 3. (Warning): Remove ``aria-label`` attribute from ``div`` element and add it ``h3`` instead
 
 ****
 
