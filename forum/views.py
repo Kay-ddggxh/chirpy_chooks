@@ -2,7 +2,7 @@ from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 
-from .models import Entry, EntryType, Response
+from .models import Entry, Response
 from .forms import EntryForm, ResponseForm
 
 
@@ -45,7 +45,6 @@ def entry_detail(request, slug):
         if 'entry_type' in request.GET:
             e_type = request.GET.get('entry_type')
             entries = entries.filter(entry_type__name=e_type)
-            filtered = True
 
     # handle response form submission
     if request.method == 'POST':
