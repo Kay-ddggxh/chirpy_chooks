@@ -2,7 +2,7 @@
 
 This a Django based (fictional!) e-commerce application which is the last of 5 required [Code Institute](https://codeinstitute.net/ie/) portfolio projects.
 
-Chirpy Chooks is the online store of a small business based in the West of Ireland, specialising in live poultry. The store offers a variety of laying hens, broiler chickens and laying ducks. It also offers delivery options within a certain radius (for the sake of simplicity this is based on counties rather than actual distances) and otherwise in-store collections.
+Chirpy Chooks is the online store of a small business based in the West of Ireland, specialising in live poultry. The store offers a variety of laying hens, broiler chickens and laying ducks. Currently the business offers in-store collection of orders only with a limited range of hoome delivery planned for the future.
 On their site, Chirpy Chooks also host a forum about all things poultry. Articles published by the business itself are posted on a regular basis, offering helpful advice about poultry keeping, interesting facts about different breeds or the latest recommendations on feeds, bedding, pest control, etc.
 
 ![responsive mockup](/media/readme/mockup.png)
@@ -415,7 +415,7 @@ Image does not contain entire policy document. Visit site to view full policy.
 
 **Checkout page**
 
-- Checkout form, including sections for personal info, delivery details and card details
+- Checkout form, including sections for personal info, contact details and card details
 - Option to save details to profile for authenticated users
 - Current order summery
 - Edit Basket button
@@ -426,7 +426,7 @@ Image does not contain entire policy document. Visit site to view full policy.
 **Checkout Success page**
 
 - Confirms successfull order and informs user that email was sent to the address specified
-- Displays order details, delivery and billing info
+- Displays order details, contact and billing info
 - Continue Shopping button ("Back to products")
 
 ![checkout success](/media/readme/features/checkout-success.png)
@@ -436,7 +436,7 @@ Image does not contain entire policy document. Visit site to view full policy.
 
 **User Profile page**
 
-- Delivery address form (pre-populated if user has previously saved his info)
+- Contact address form (pre-populated if user has previously saved his info)
 - Update Info button
 - Listing of past orders in order history
 

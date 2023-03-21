@@ -38,7 +38,7 @@
                         </td>
                     </tr>
                     <tr>
-                        <td colspan="4" class="text-end" id="deliveryCost">
+                        <td colspan="4" class="text-end" id="Cost">
                             Delivery Cost: € {{ delivery | floatformat:2 }}
                         </td>
                     </tr>
@@ -62,7 +62,7 @@
                 {{ order_form.phone_number | as_crispy_field }}
             </fieldset>
             <fieldset class="mb-4">
-                <legend>Delivery Information</legend>
+                <legend>Contact Information</legend>
                 {{ order_form.street_address1 | as_crispy_field }}
                 {{ order_form.street_address2 | as_crispy_field }}
                 {{ order_form.town_or_city | as_crispy_field }}
@@ -70,7 +70,7 @@
                 {{ order_form.postcode | as_crispy_field }}
                 <div class="form-check form-check-inline float-right mr-0">
                     {% if user.is_authenticated %}
-                        <label class="form-check-label" for="id-save-info">Save delivery information to profile</label>
+                        <label class="form-check-label" for="id-save-info">Save contact information to profile</label>
                         <input class="form-check-input ml-2 mr-0" type="checkbox" id="id-save-info" name="save-info" checked>
                     {% else %}
                         <label class="form-check-label" for="id-save-info">

@@ -12,7 +12,7 @@ Order Total: ${{ order.order_total }}
 Delivery: ${{ order.delivery_cost }}
 Grand Total: ${{ order.grand_total }}
 
-Your order will be deliverd to: 
+Your contact information has been specified as: 
 {{ order.street_address1 }}
 {{ order.town_or_city }}
 {{ order.county }}
