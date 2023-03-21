@@ -450,6 +450,10 @@ Image does not contain entire policy document. Visit site to view full policy.
 The shop has the potential to extend its product range to non-livestock products, such as bird coops, feed, bedding and miscellaneous.
 For the purpose of this project however, it was unnecessary to implement such a broad product database.
 
+**Search option**
+
+A search bar could be included in the header or be accessible throughout all products related pages of the site. Currently the product selection is so small that a search bar was deemed unnecessary but would make sense to implement along with an extended product range.
+
 **Automated pick-up date selection**
 
 Currently, the arrangment of a date for product collection is handled manually by shop employees via email or phone contact directly with the customer after order completion.
@@ -600,6 +604,12 @@ For extensive instructions on how to manually test this site and it's user stori
 As this is a Django project, the HTML couldn't be tested via the site's URL, due to Django tags and Jinja templating language in HTML files. Instead, the source code of each page was pasted into the validator directly.
 
 **Error page**
+
+*Result:*
+
+![error result](/media/readme/validation/html-noerrors.png)
+
+**SignUp/Login/Logout page**
 
 *Result:*
 

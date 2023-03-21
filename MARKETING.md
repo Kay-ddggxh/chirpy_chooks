@@ -3,6 +3,7 @@
 ## Table of Contents
 
 - [Keyword Research](#keyword-research)
+- [Research of similar businesses](#research-of-similar-businesses)
 - [SEO Improvements](#seo-improvements)
 - [Marketing Strategies](#marketing-strategies)
 
@@ -31,6 +32,13 @@ Most keywords showed extremely low volume and competition.
 ![poultry sale galway ireland](media/readme/seo/poultry-sale-galway-ireland.png)
 
 
+## Research of similar businesses
+
+The main inspiration for the Chirpy Chooks fictional business was [Freeway Poultry](https://www.freewaypoultry.ie/).
+
+Also the farming section of [DoneDeal](https://www.donedeal.ie/).
+
+
 ## SEO Improvements
 
 **Meta tags**
@@ -48,6 +56,32 @@ The existence of this file signals a level of quality to search engines and so i
 
 
 ## Marketing Strategies
+
+### Pre-strategy planning
+
+Before deciding on marketing strategies and defining a business plan, I tried to answer the following question to provide a framework for the business' strategy:
+
+**Which online platforms would you find lots of your users on?**
+
+Facebook for younger users. DoneDeal for all age users.
+
+**What do your users need? Could you meet that need with useful content? If yes, how could you best deliver that content to them?**
+
+Users need poultry breeder local to the mid-west region of Ireland with selection of different poultry. Home delivery by store employee would be ideal. However, currently not implement by the business but open for future implementation.
+
+**Would your business run sales or offer discounts? How do you think your users would most like to hear about these offers?**
+
+Discounts for larger order are a valid option. Currently not implemented. Newsletter or facebook posts best way to keep users informed about updates to products and sales.
+
+**What are the goals of your business? Which marketing strategies would offer the best ways to meet those goals?**
+
+Goal is to provide the rural population of the specified region with a reliable and knowledgable poultry breeder. Not only supplying products but also providing a reliable contact for advice and information on poultry keeping.
+
+**Would your business have a budget to spend on advertising? Or would it need to work with free or low cost options to market itself?**
+
+To start with business would rely on free marketing options such as establishing a strong social media presence among its target customer base. Paying for sponsored advertising on DoneDeal is a valid option for the future.
+
+### Strategies
 
 Any paid marketing strategies were beyond the scope and requirements for this project as it is a fictional business created by a student.
 
