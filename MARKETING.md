@@ -39,6 +39,7 @@ The main inspiration for the Chirpy Chooks fictional business was [Freeway Poult
 Also the farming section of [DoneDeal](https://www.donedeal.ie/).
 
 
+
 ## SEO Improvements
 
 **Meta tags**
@@ -58,6 +59,8 @@ The existence of this file signals a level of quality to search engines and so i
 ## Marketing Strategies
 
 ### Pre-strategy planning
+
+Chirpy Chooks is B2C business concept. It produces and sells its own products and has a limited distribution range.
 
 Before deciding on marketing strategies and defining a business plan, I tried to answer the following question to provide a framework for the business' strategy:
 
